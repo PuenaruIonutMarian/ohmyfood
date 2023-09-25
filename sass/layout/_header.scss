@@ -1,0 +1,13 @@
+.header{
+    display: flex;
+    // justify-content: center;
+    align-items: center;
+
+    &__title{
+        font-family: $title-font;
+        margin: 1.3rem auto;
+        font-weight: 500;
+        font-size: 3rem;
+    }
+
+}

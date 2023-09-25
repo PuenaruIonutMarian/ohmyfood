@@ -1,0 +1,42 @@
+.footer {
+    background-color: $color-dark-grey-2;
+    color: #fff;
+    padding: 2.2rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+
+    &__title {
+        font-family: $title-font;
+        font-weight: 400;
+        font-size: 1.8rem;
+    }
+
+    &__nav {
+        display: flex;
+        gap:.7rem;
+        flex-direction: column;
+        list-style: none;
+        font-size: 1.6rem;
+        font-weight: 500;
+
+        &-item {
+            display: flex;
+            gap: 1rem;
+
+            &:nth-last-child(-n+2) {
+                font-weight: 400;}
+
+            &:nth-last-child(3) .fa-handshake {
+                    transform: rotate(-25deg);
+                }
+            
+
+            .footer__nav-link {
+                text-decoration: none;
+                color: #fff;
+            }
+        }
+    }
+
+}
