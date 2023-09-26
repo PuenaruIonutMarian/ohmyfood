@@ -1,6 +1,16 @@
 .card-sm {
     display: flex;
     border-radius: 2rem;
+    max-width: 70rem;
     box-shadow: $shadow;
-    max-width: 32.5rem;
+
+    @media only screen and (min-width: 768px){ max-width:32.5rem;}
+        
+    
+}
+
+.card-md{
+    border-radius: 1.5rem;
+    box-shadow: $shadow;
+    background-color: #fff; 
 }
