@@ -28,155 +28,157 @@
     </header>
 
     <!-- MAIN AREA -->
-    <main class="restaurant">
+    <main class="restaurant__main">
         <div class="restaurant__img">
             <img src="../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
                 alt="Plat au restaurant Le delice des sens" class="restaurant__img--photo">
         </div>
-        <section class="restaurant__menu">
-            <!-- TITLE -->
-            <div class="restaurant__menu-title">
-                <h1 class="restaurant__title">Le délice des sens</h1>
-            </div>
-            <!-- Heart -->
-            <div class="restaurant__menu-rating">
-                <i class="fa-regular fa-heart fa-2xl"></i>
-            </div>
-
-            <!-- ENTREES -->
-            <div class="food">
-                <!-- Title Entrees -->
-                <div class="food__title">
-                    <h2 class="food__title-text">
-                        Entrées
-                    </h2>
-                </div>
-                <!-- Option 1 -->
-                <div class="food__option card-sm">
-                    <div class="food__description">
-                        <h3 class="food__name">Tartare de thon</h3>
-                        <p class="food__ingredients">Assaisonné au yuzu</p>
-                    </div>
-                    <div class="food__price">
-                        <p class="food__price--text">25€</p>
-                    </div>
-                    <div class="food__choice"></div>
-                </div>
-                <!-- Option 2 -->
-                <div class="food__option card-sm">
-                    <div class="food__description">
-                        <h3 class="food__name">Bouchée de homard croustillant</h3>
-                        <p class="food__ingredients">Et sa farandole de petits légumes</p>
-                    </div>
-                    <div class="food__price">
-                        <p class="food__price--text">35€</p>
-                    </div>
-                    <div class="food__choice"></div>
-                </div>
-                <!-- Option 3 -->
-                <div class="food__option card-sm">
-                    <div class="food__description">
-                        <h3 class="food__name">Poulet rôti aux herbes de Provence </h3>
-                        <p class="food__ingredients">Et sa crème de truffe</p>
-                    </div>
-                    <div class="food__price">
-                        <p class="food__price--text">40€</p>
-                    </div>
-                    <div class="food__choice"></div>
-                </div>
-            </div>
 
 
-            <!-- PLATS -->
-            <div class="food">
-                <!-- Title Entrees -->
-                <div class="food__title">
-                    <h2 class="food__title-text">
-                        Plats
-                    </h2>
-                </div>
-                <!-- Option 1 -->
-                <div class="food__option card-sm">
-                    <div class="food__description">
-                        <h3 class="food__name">Poulet rôti aux herbes de Provence </h3>
-                        <p class="food__ingredients">Et sa crème de truffe</p>
-                    </div>
-                    <div class="food__price">
-                        <p class="food__price--text">40€</p>
-                    </div>
-                    <div class="food__choice"></div>
-                </div>
-                <!-- Option 2 -->
-                <div class="food__option card-sm">
-                    <div class="food__description">
-                        <h3 class="food__name">Langouste rôtie</h3>
-                        <p class="food__ingredients">Et ses légumes de saison</p>
-                    </div>
-                    <div class="food__price">
-                        <p class="food__price--text">35€</p>
-                    </div>
-                    <div class="food__choice"></div>
-                </div>
-                <!-- Option 3 -->
-                <div class="food__option card-sm">
-                    <div class="food__description">
-                        <h3 class="food__name">Côte de bœuf Angus</h3>
-                        <p class="food__ingredients">Et sa purée de panais</p>
-                    </div>
-                    <div class="food__price">
-                        <p class="food__price--text">44€</p>
-                    </div>
-                    <div class="food__choice"></div>
-                </div>
-            </div>
-
-
-            <!-- DESSERTS -->
-            <div class="food">
-                <!-- Title Entrees -->
-                <div class="food__title">
-                    <h2 class="food__title-text">
-                        Desserts
-                    </h2>
-                </div>
-                <!-- Option 1 -->
-                <div class="food__option card-sm">
-                    <div class="food__description">
-                        <h3 class="food__name">Farandole de desserts</h3>
-                        <p class="food__ingredients">Du chef</p>
-                    </div>
-                    <div class="food__price">
-                        <p class="food__price--text">18€</p>
-                    </div>
-                    <div class="food__choice"></div>
-                </div>
-                <!-- Option 2 -->
-                <div class="food__option card-sm">
-                    <div class="food__description">
-                        <h3 class="food__name">Crème brulée</h3>
-                        <p class="food__ingredients">Revisitée</p>
-                    </div>
-                    <div class="food__price">
-                        <p class="food__price--text">22€</p>
-                    </div>
-                    <div class="food__choice"></div>
-                </div>
-                <!-- Option 3 -->
-                <div class="food__option card-sm">
-                    <div class="food__description">
-                        <h3 class="food__name">Tiramisu</h3>
-                        <p class="food__ingredients">À la noisette</p>
-                    </div>
-                    <div class="food__price">
-                        <p class="food__price--text">23€</p>
-                    </div>
-                    <div class="food__choice"></div>
+        <section class="restaurant">
+            <div class="restaurant__menu-container">
+                <!-- TITLE -->
+                <div class="restaurant__menu-title">
+                    <h1 class="restaurant__title">Le délice des sens</h1>
+                    <i class="fa-regular fa-heart fa-2xl"></i>
                 </div>
 
-            </div>
+                <div class="food__container">
+                    <!-- ENTREES -->
+                    <div class="food">
+                        <!-- Title Entrees -->
+                        <div class="food__title">
+                            <h2 class="food__title-text">
+                                Entrées
+                            </h2>
+                        </div>
+                        <!-- Option 1 -->
+                        <div class="food__option card-md">
+                            <div class="food__description">
+                                <h3 class="food__name">Tartare de thon</h3>
+                                <p class="food__ingredients">Assaisonné au yuzu</p>
+                            </div>
+                            <div class="food__price">
+                                <p class="food__price--text">25€</p>
+                            </div>
+                            <div class="food__choice"></div>
+                        </div>
+                        <!-- Option 2 -->
+                        <div class="food__option card-md">
+                            <div class="food__description">
+                                <h3 class="food__name">Bouchée de homard croustillant</h3>
+                                <p class="food__ingredients">Et sa farandole de petits légumes</p>
+                            </div>
+                            <div class="food__price">
+                                <p class="food__price--text">35€</p>
+                            </div>
+                            <div class="food__choice"></div>
+                        </div>
+                        <!-- Option 3 -->
+                        <div class="food__option card-md">
+                            <div class="food__description">
+                                <h3 class="food__name">Poulet rôti aux herbes de Provence </h3>
+                                <p class="food__ingredients">Et sa crème de truffe</p>
+                            </div>
+                            <div class="food__price">
+                                <p class="food__price--text">40€</p>
+                            </div>
+                            <div class="food__choice"></div>
+                        </div>
+                    </div>
 
-            <div class="restaurant__menu-button">
-                <button class="btn">Commander</button>
+
+                    <!-- PLATS -->
+                    <div class="food">
+                        <!-- Title Entrees -->
+                        <div class="food__title">
+                            <h2 class="food__title-text">
+                                Plats
+                            </h2>
+                        </div>
+                        <!-- Option 1 -->
+                        <div class="food__option card-md">
+                            <div class="food__description">
+                                <h3 class="food__name">Poulet rôti aux herbes de Provence </h3>
+                                <p class="food__ingredients">Et sa crème de truffe</p>
+                            </div>
+                            <div class="food__price">
+                                <p class="food__price--text">40€</p>
+                            </div>
+                            <div class="food__choice"></div>
+                        </div>
+                        <!-- Option 2 -->
+                        <div class="food__option card-md">
+                            <div class="food__description">
+                                <h3 class="food__name">Langouste rôtie</h3>
+                                <p class="food__ingredients">Et ses légumes de saison</p>
+                            </div>
+                            <div class="food__price">
+                                <p class="food__price--text">35€</p>
+                            </div>
+                            <div class="food__choice"></div>
+                        </div>
+                        <!-- Option 3 -->
+                        <div class="food__option card-md">
+                            <div class="food__description">
+                                <h3 class="food__name">Côte de bœuf Angus</h3>
+                                <p class="food__ingredients">Et sa purée de panais</p>
+                            </div>
+                            <div class="food__price">
+                                <p class="food__price--text">44€</p>
+                            </div>
+                            <div class="food__choice"></div>
+                        </div>
+                    </div>
+
+
+                    <!-- DESSERTS -->
+                    <div class="food">
+                        <!-- Title Entrees -->
+                        <div class="food__title">
+                            <h2 class="food__title-text">
+                                Desserts
+                            </h2>
+                        </div>
+                        <!-- Option 1 -->
+                        <div class="food__option card-md">
+                            <div class="food__description">
+                                <h3 class="food__name">Farandole de desserts</h3>
+                                <p class="food__ingredients">Du chef</p>
+                            </div>
+                            <div class="food__price">
+                                <p class="food__price--text">18€</p>
+                            </div>
+                            <div class="food__choice"></div>
+                        </div>
+                        <!-- Option 2 -->
+                        <div class="food__option card-md">
+                            <div class="food__description">
+                                <h3 class="food__name">Crème brulée</h3>
+                                <p class="food__ingredients">Revisitée</p>
+                            </div>
+                            <div class="food__price">
+                                <p class="food__price--text">22€</p>
+                            </div>
+                            <div class="food__choice"></div>
+                        </div>
+                        <!-- Option 3 -->
+                        <div class="food__option card-md">
+                            <div class="food__description">
+                                <h3 class="food__name">Tiramisu</h3>
+                                <p class="food__ingredients">À la noisette</p>
+                            </div>
+                            <div class="food__price">
+                                <p class="food__price--text">23€</p>
+                            </div>
+                            <div class="food__choice"></div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="restaurant__menu-button">
+                    <button class="btn">Commander</button>
+                </div>
             </div>
         </section>
     </main>
