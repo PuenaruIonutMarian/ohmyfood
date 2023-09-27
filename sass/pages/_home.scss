@@ -136,13 +136,34 @@
         margin: 0 auto;
         width: 100%;
 
+        a.restaurant__link:nth-child(-n+2) {
+            .restaurant-card {
+                position: relative;
+
+                &::before {
+                    content: 'Nouveau';
+                    font-size: 1.4rem;
+                    position: absolute;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    top: 1rem;
+                    right: 1rem;
+                    padding: .7rem .9rem;
+                    border-radius: .1rem;
+                    font-weight: 500;
+                    color: darken($color-tertiary, 40%);
+                    background-color: $color-tertiary;
+                }
+            }
+        }
+
 
         .restaurant__link {
             width: 100%;
             max-width: 49rem;
             text-decoration: none;
             color: black;
-            // overflow: hidden;
 
             .restaurant-card {
                 display: flex;
@@ -191,5 +212,8 @@
                 }
             }
         }
+
     }
-}
+}    
+
+
