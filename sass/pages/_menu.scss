@@ -130,7 +130,7 @@
                 &__option {
 
                     display: flex;
-                    justify-content: space-between;
+                    // justify-content: space-between;
                     padding: 1.5rem;
                     gap: .5rem;
                     width: 100%;
@@ -146,23 +146,36 @@
                         display: flex;
                         flex-direction: column;
                         gap: .5rem;
+                        @include dots;
+
+
 
                         .food__name {
+
+                            width: 100%;
                             font-size: 1.8rem;
                             font-weight: 500;
+                            @include dots;
                         }
 
                         .food__ingredients {
+
+                            width: 100%;
                             font-size: 1.5rem;
                             font-weight: 300;
+                            @include dots;
                         }
                     }
 
                     .food__price {
                         display: flex;
-                        align-items: end;
+                        margin-left: auto;
+                        align-items: flex-end;
                         font-size: 1.5rem;
                         font-weight: 700;
+                    //           transition: all 2s ease-in-out;
+                    // cursor: pointer;
+                
 
 
                         .food__choice {
