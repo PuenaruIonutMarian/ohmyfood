@@ -24,6 +24,10 @@
         padding: 1rem;
         margin: 0 5.8rem 0 4.2rem;
 
+        @media only screen and (min-width: 768px) {
+            font-size: 2.5rem;
+        }
+
     }
 
     &__subtitle {
@@ -45,6 +49,10 @@
     padding: 4.8rem 2rem 6rem 2rem;
 
     @media only screen and (min-width: 768px) {
+        max-width: 1080px;
+        margin: 0 auto;
+        padding-left: 0;
+        padding-right: 0;
         align-items: center;
     }
 
@@ -57,11 +65,18 @@
 
         @media only screen and (min-width: 768px) {
             flex-direction: row;
+            justify-content: space-between;
+            padding: 0 1.5rem 0 .5rem;
         }
     }
 
     &__title {
         @include title_style;
+                @media only screen and (min-width: 768px) {
+            width: 100%;
+            display: flex;
+            justify-self: flex-start;
+        }
     }
 
 
@@ -71,6 +86,9 @@
         align-items: center;
         justify-content: flex-start;
         margin-left: 1rem;
+                @media only screen and (min-width: 768px) {
+            width: 100%;
+        }
 
 
         &--content {
@@ -113,28 +131,33 @@
         flex-direction: column;
         margin: 2rem 2rem 5rem 2rem;
         gap: 2rem;
+        width: 100%;
+        max-width: 1080px;
     }
 
     &__title {
         display: flex;
-        justify-content: center;
         max-width: 49rem;
         @include title_style;
-        margin: 0 auto;
         width: 100%;
-
-        &-text {
-            margin-right: auto;
-        }
     }
 
     &__cards-container {
         display: flex;
+        flex-direction: column;
         gap: 1.8rem;
-        justify-content: center;
-        flex-wrap: wrap;
-        margin: 0 auto;
+        // margin: 0 auto;
         width: 100%;
+
+        @media only screen and (min-width: 768px) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            row-gap: 5rem;
+            column-gap: 10rem;
+        }
+
+
+
 
         a.restaurant__link:nth-child(-n+2) {
             .restaurant-card {
@@ -161,9 +184,15 @@
 
         .restaurant__link {
             width: 100%;
-            max-width: 49rem;
+            max-width: 74rem;
             text-decoration: none;
             color: black;
+
+            // @media only screen and (min-width: 768px) {
+            //     max-width: 49.86rem;
+            // }
+
+
 
             .restaurant-card {
                 display: flex;
@@ -214,6 +243,4 @@
         }
 
     }
-}    
-
-
+}
