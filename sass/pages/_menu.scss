@@ -57,7 +57,7 @@
     display: flex;
     flex-direction: column;
     background-color: $color-light-grey-1;
-    border-top-left-radius: 4rem;
+    border-top-left-radius: 5rem;
     border-top-right-radius: 5rem;
     max-width: 105rem;
     margin-top: -5rem;
@@ -81,8 +81,9 @@
             justify-content: center;
             align-items: center;
 
-            .fa-heart{
-                padding-right: 2.5rem;
+            .restaurant-heart{
+                margin-bottom: 2rem;
+                font-size: 2.4rem;
             }
 
             .restaurant__title {
@@ -103,19 +104,17 @@
                 width: 60%;
             }
 
-
-
             .food {
                 display: flex;
                 flex-direction: column;
                 gap: 1.2rem;
                 align-items: flex-start;
 
-
-
-
-
                 &__title {
+                    animation-name: moveInLeft;
+                    animation-duration: 1s;
+                    animation-timing-function: ease-in;
+
                     &-text {
                         font-size: 1.6rem;
                         font-weight: 300;
@@ -133,19 +132,15 @@
                 }
 
                 &__option {
-
+                    animation: moveInRight 1s ease-in;
                     display: flex;
-                    // justify-content: space-between;
                     padding: 1.5rem;
-                    gap: .5rem;
                     width: 100%;
+                    // //////////////////////
                     position: relative;
-
-                    // testing
-
-                    // transition: all 2s ease-out;
-                    // cursor: pointer;
-                    ///////////
+                    overflow: hidden;
+                    // justify-content: space-between;    
+                    // /////////////////
 
                     .food__description {
                         display: flex;
@@ -153,10 +148,7 @@
                         gap: .5rem;
                         @include dots;
 
-
-
                         .food__name {
-
                             width: 100%;
                             font-size: 1.8rem;
                             font-weight: 500;
@@ -164,7 +156,6 @@
                         }
 
                         .food__ingredients {
-
                             width: 100%;
                             font-size: 1.5rem;
                             font-weight: 300;
@@ -178,46 +169,56 @@
                         align-items: flex-end;
                         font-size: 1.5rem;
                         font-weight: 700;
-                    // transition: all 2s ease-in-out;
-                    // cursor: pointer;
-                
+                        gap:2rem;
+                        position: absolute;
+                        right: 2rem;
+                        top:0;
+                        &--text{
+                        padding-bottom: 1.5rem;
+                        }
 
 
                         .food__choice {
-                            display: none;
-                        }
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
 
-                    }
+                            margin-right: -9rem;
+                            width: 7rem;
+                            height: 7.5rem;
+                            padding: 0 1.5rem;
+                            background-color: $color-tertiary;
+                            transition: margin-right 0.4s ease-in-out;
 
-                    &:hover .food__choice {
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        width: 6.5rem;
-                        height: 7.5rem;
-                        margin-left: 1rem;
-                        margin: -4rem -1.5rem -1.5rem 1rem;
-                        border-top-right-radius: 1.5rem;
-                        border-bottom-right-radius: 1.5rem;
-                        background-color: $color-tertiary;
-                        transition: all 1s ease-in-out;
+                            &::after {
+                                content: '\f00c';
+                                font-family: 'FontAwesome';
+                                padding: .8rem;
+                                border-radius: 50%;
+                                color: $color-tertiary;
+                                font-size: 1.5rem;
+                                background-color: #fff;
+                                transition: transform 0.8s ease-in-out;
+                            }
 
-                        &::before {
-                            content: '\f00c';
-                            font-family: 'FontAwesome';
-                            padding: .8rem;
-                            border-radius: 50%;
-                            color: $color-tertiary;
-                            font-size: 1.5rem;
-                            background-color: #fff;
-                            transition: transform 1s ease-in-out;
                         }
                     }
+
+
+                &:hover .food__choice{
+                // &:focus .food__choice{
+                    margin-right: -2rem;
                 }
+
+
+                }
+
             }
         }
 
         .restaurant__menu-button {
+            animation: moveInBottom 1s ease-in;
+
             .btn {
                 width: 18.6rem;
             }

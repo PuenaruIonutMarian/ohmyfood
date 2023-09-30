@@ -1,0 +1,34 @@
+    .heart-button {
+      cursor: pointer;
+      display: inline-block;
+      font-size: 1.8rem;
+      position: relative;
+    }
+
+    .heart-button .fa-heart {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+.fa-heart-solid{
+      background: $gradient;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    opacity: 0;
+    cursor: pointer;
+}
+
+    .heart-button:hover .fa-heart-empty {
+      opacity:0; 
+    }
+
+    .heart-button:hover .fa-heart-solid {
+      
+      opacity: 1;
+    }
+
+
+
