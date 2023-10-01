@@ -10,13 +10,15 @@
     background:$color-dark-grey-2;
     z-index:1000;
     display: none;
-    animation: showLoader 5s linear;
+    animation: showLoader 4s ease forwards;
+
 
     .pan-loader {
         width: 18rem;
         height: 18rem;
-        margin: 50vh auto;
+        margin: 40vh auto;
         position: relative;
+
 
         .steams {
             @for $i from 1 through 8 {
@@ -26,36 +28,36 @@
             }
 
             &--1 {
-                animation: steam-one 4s;
+                animation: steam-one 4s ease-out;
             }
 
             &--2 {
-                animation: steam-two 4s .5s;
+                animation: steam-two 4s ease-out .5s infinite;
             }
 
             &--3 {
-                animation: steam-three 4s .1s;
+                animation: steam-three 4s ease-out .1s infinite;
             }
 
 
             &--4 {
-                animation: steam-four 4s 1.5s;
+                animation: steam-four 4s ease-out 1.5s infinite;
             }
 
             &--5 {
-                animation: steam-one 4s 2s;
+                animation: steam-one 4s ease-out 2s infinite;
             }
 
             &--6 {
-                animation: steam-two 4s 2.5s;
+                animation: steam-two 4s ease-out 2.5s infinite;
             }
 
             &--7 {
-                animation: steam-three 4s 3s;
+                animation: steam-three 4s ease-out 3s infinite;
             }
 
             &--8 {
-                animation: steam-four 4s 3.5s;
+                animation: steam-four 4s ease-out 3.5s infinite;
             }
         }
 
@@ -93,4 +95,15 @@
         }
     }
 
+
+    .motto{
+        font-family: $title-font;
+        margin-top: 3rem;
+        margin-left:-3rem;
+        color: $color-tertiary;
+        text-align:center;
+        letter-spacing: .1rem;
+        font-size: 1.8rem;
+        &-text--1{margin-bottom: 2rem;}
+    }
 }

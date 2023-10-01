@@ -565,11 +565,11 @@ body {
   background: #353535;
   z-index: 1000;
   display: none;
-  animation: showLoader 5s linear; }
+  animation: showLoader 4s ease forwards; }
   .loader .pan-loader {
     width: 18rem;
     height: 18rem;
-    margin: 50vh auto;
+    margin: 40vh auto;
     position: relative; }
     .loader .pan-loader .steams .steams--1 {
       position: absolute;
@@ -580,9 +580,7 @@ body {
       margin-left: 3rem;
       margin-top: -2.5rem;
       z-index: 0;
-      opacity: 0;
-      animation-timing-function: ease-out;
-      animation-iteration-count: infinite; }
+      opacity: 0; }
     .loader .pan-loader .steams .steams--2 {
       position: absolute;
       width: 5rem;
@@ -592,9 +590,7 @@ body {
       margin-left: 3rem;
       margin-top: -2.5rem;
       z-index: 0;
-      opacity: 0;
-      animation-timing-function: ease-out;
-      animation-iteration-count: infinite; }
+      opacity: 0; }
     .loader .pan-loader .steams .steams--3 {
       position: absolute;
       width: 5rem;
@@ -604,9 +600,7 @@ body {
       margin-left: 3rem;
       margin-top: -2.5rem;
       z-index: 0;
-      opacity: 0;
-      animation-timing-function: ease-out;
-      animation-iteration-count: infinite; }
+      opacity: 0; }
     .loader .pan-loader .steams .steams--4 {
       position: absolute;
       width: 5rem;
@@ -616,9 +610,7 @@ body {
       margin-left: 3rem;
       margin-top: -2.5rem;
       z-index: 0;
-      opacity: 0;
-      animation-timing-function: ease-out;
-      animation-iteration-count: infinite; }
+      opacity: 0; }
     .loader .pan-loader .steams .steams--5 {
       position: absolute;
       width: 5rem;
@@ -628,9 +620,7 @@ body {
       margin-left: 3rem;
       margin-top: -2.5rem;
       z-index: 0;
-      opacity: 0;
-      animation-timing-function: ease-out;
-      animation-iteration-count: infinite; }
+      opacity: 0; }
     .loader .pan-loader .steams .steams--6 {
       position: absolute;
       width: 5rem;
@@ -640,9 +630,7 @@ body {
       margin-left: 3rem;
       margin-top: -2.5rem;
       z-index: 0;
-      opacity: 0;
-      animation-timing-function: ease-out;
-      animation-iteration-count: infinite; }
+      opacity: 0; }
     .loader .pan-loader .steams .steams--7 {
       position: absolute;
       width: 5rem;
@@ -652,9 +640,7 @@ body {
       margin-left: 3rem;
       margin-top: -2.5rem;
       z-index: 0;
-      opacity: 0;
-      animation-timing-function: ease-out;
-      animation-iteration-count: infinite; }
+      opacity: 0; }
     .loader .pan-loader .steams .steams--8 {
       position: absolute;
       width: 5rem;
@@ -664,25 +650,23 @@ body {
       margin-left: 3rem;
       margin-top: -2.5rem;
       z-index: 0;
-      opacity: 0;
-      animation-timing-function: ease-out;
-      animation-iteration-count: infinite; }
+      opacity: 0; }
     .loader .pan-loader .steams--1 {
-      animation: steam-one 4s; }
+      animation: steam-one 4s ease-out; }
     .loader .pan-loader .steams--2 {
-      animation: steam-two 4s .5s; }
+      animation: steam-two 4s ease-out .5s infinite; }
     .loader .pan-loader .steams--3 {
-      animation: steam-three 4s .1s; }
+      animation: steam-three 4s ease-out .1s infinite; }
     .loader .pan-loader .steams--4 {
-      animation: steam-four 4s 1.5s; }
+      animation: steam-four 4s ease-out 1.5s infinite; }
     .loader .pan-loader .steams--5 {
-      animation: steam-one 4s 2s; }
+      animation: steam-one 4s ease-out 2s infinite; }
     .loader .pan-loader .steams--6 {
-      animation: steam-two 4s 2.5s; }
+      animation: steam-two 4s ease-out 2.5s infinite; }
     .loader .pan-loader .steams--7 {
-      animation: steam-three 4s 3s; }
+      animation: steam-three 4s ease-out 3s infinite; }
     .loader .pan-loader .steams--8 {
-      animation: steam-four 4s 3.5s; }
+      animation: steam-four 4s ease-out 3.5s infinite; }
     .loader .pan-loader .pan-container {
       display: flex;
       width: 100%; }
@@ -735,3 +719,13 @@ body {
         transform: rotateZ(45deg) scale(1.1);
         filter: drop-shadow(0 0 10px #d43322);
         animation: shake 1s ease-in-out infinite; }
+  .loader .motto {
+    font-family: "Shrikhand", cursive;
+    margin-top: 3rem;
+    margin-left: -3rem;
+    color: #99E2D0;
+    text-align: center;
+    letter-spacing: .1rem;
+    font-size: 1.8rem; }
+    .loader .motto-text--1 {
+      margin-bottom: 2rem; }
