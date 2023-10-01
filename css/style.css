@@ -34,6 +34,55 @@
     opacity: 1;
     transform: translateX(0); } }
 
+@keyframes shake {
+  0%,
+  100% {
+    transform: rotateZ(30deg) scale(1.1); }
+  50% {
+    transform: rotateZ(50deg) scale(0.9); } }
+
+@keyframes steam-one {
+  0% {
+    transform: translateY(0) translateX(0) scale(0.25);
+    opacity: 0.35; }
+  100% {
+    transform: translateY(-20rem) translateX(2rem) scale(1);
+    opacity: 0; } }
+
+@keyframes steam-two {
+  0% {
+    transform: translateY(0) translateX(1rem) scale(0.25);
+    opacity: 0.35; }
+  100% {
+    transform: translateY(-20rem) translateX(-1rem) scale(1);
+    opacity: 0; } }
+
+@keyframes steam-three {
+  0% {
+    transform: translateY(0) translateX(-1rem) scale(0.25);
+    opacity: 0.35; }
+  100% {
+    transform: translateY(-20rem) translateX(-1rem) scale(1);
+    opacity: 0; } }
+
+@keyframes steam-four {
+  0% {
+    transform: translateY(0) translateX(0) scale(0.25);
+    opacity: 0.35; }
+  100% {
+    transform: translateY(-20rem) translateX(-2rem) scale(1);
+    opacity: 0; } }
+
+@keyframes showLoader {
+  0% {
+    display: block;
+    opacity: 1; }
+  85% {
+    opacity: 1; }
+  100% {
+    opacity: 0;
+    display: none; } }
+
 *,
 *::after,
 *::before {
@@ -504,3 +553,185 @@ body {
 
 .heart-button:hover .fa-heart-solid {
   opacity: 1; }
+
+.loader {
+  position: fixed;
+  padding: 0;
+  margin: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #353535;
+  z-index: 1000;
+  display: none;
+  animation: showLoader 5s linear; }
+  .loader .pan-loader {
+    width: 18rem;
+    height: 18rem;
+    margin: 50vh auto;
+    position: relative; }
+    .loader .pan-loader .steams .steams--1 {
+      position: absolute;
+      width: 5rem;
+      height: 5rem;
+      background-color: #99E2D0;
+      border-radius: 50%;
+      margin-left: 3rem;
+      margin-top: -2.5rem;
+      z-index: 0;
+      opacity: 0;
+      animation-timing-function: ease-out;
+      animation-iteration-count: infinite; }
+    .loader .pan-loader .steams .steams--2 {
+      position: absolute;
+      width: 5rem;
+      height: 5rem;
+      background-color: #99E2D0;
+      border-radius: 50%;
+      margin-left: 3rem;
+      margin-top: -2.5rem;
+      z-index: 0;
+      opacity: 0;
+      animation-timing-function: ease-out;
+      animation-iteration-count: infinite; }
+    .loader .pan-loader .steams .steams--3 {
+      position: absolute;
+      width: 5rem;
+      height: 5rem;
+      background-color: #99E2D0;
+      border-radius: 50%;
+      margin-left: 3rem;
+      margin-top: -2.5rem;
+      z-index: 0;
+      opacity: 0;
+      animation-timing-function: ease-out;
+      animation-iteration-count: infinite; }
+    .loader .pan-loader .steams .steams--4 {
+      position: absolute;
+      width: 5rem;
+      height: 5rem;
+      background-color: #99E2D0;
+      border-radius: 50%;
+      margin-left: 3rem;
+      margin-top: -2.5rem;
+      z-index: 0;
+      opacity: 0;
+      animation-timing-function: ease-out;
+      animation-iteration-count: infinite; }
+    .loader .pan-loader .steams .steams--5 {
+      position: absolute;
+      width: 5rem;
+      height: 5rem;
+      background-color: #99E2D0;
+      border-radius: 50%;
+      margin-left: 3rem;
+      margin-top: -2.5rem;
+      z-index: 0;
+      opacity: 0;
+      animation-timing-function: ease-out;
+      animation-iteration-count: infinite; }
+    .loader .pan-loader .steams .steams--6 {
+      position: absolute;
+      width: 5rem;
+      height: 5rem;
+      background-color: #99E2D0;
+      border-radius: 50%;
+      margin-left: 3rem;
+      margin-top: -2.5rem;
+      z-index: 0;
+      opacity: 0;
+      animation-timing-function: ease-out;
+      animation-iteration-count: infinite; }
+    .loader .pan-loader .steams .steams--7 {
+      position: absolute;
+      width: 5rem;
+      height: 5rem;
+      background-color: #99E2D0;
+      border-radius: 50%;
+      margin-left: 3rem;
+      margin-top: -2.5rem;
+      z-index: 0;
+      opacity: 0;
+      animation-timing-function: ease-out;
+      animation-iteration-count: infinite; }
+    .loader .pan-loader .steams .steams--8 {
+      position: absolute;
+      width: 5rem;
+      height: 5rem;
+      background-color: #99E2D0;
+      border-radius: 50%;
+      margin-left: 3rem;
+      margin-top: -2.5rem;
+      z-index: 0;
+      opacity: 0;
+      animation-timing-function: ease-out;
+      animation-iteration-count: infinite; }
+    .loader .pan-loader .steams--1 {
+      animation: steam-one 4s; }
+    .loader .pan-loader .steams--2 {
+      animation: steam-two 4s .5s; }
+    .loader .pan-loader .steams--3 {
+      animation: steam-three 4s .1s; }
+    .loader .pan-loader .steams--4 {
+      animation: steam-four 4s 1.5s; }
+    .loader .pan-loader .steams--5 {
+      animation: steam-one 4s 2s; }
+    .loader .pan-loader .steams--6 {
+      animation: steam-two 4s 2.5s; }
+    .loader .pan-loader .steams--7 {
+      animation: steam-three 4s 3s; }
+    .loader .pan-loader .steams--8 {
+      animation: steam-four 4s 3.5s; }
+    .loader .pan-loader .pan-container {
+      display: flex;
+      width: 100%; }
+      .loader .pan-loader .pan-container .pan {
+        width: 60%;
+        height: 8rem;
+        background: linear-gradient(to bottom, #FF79DA, #9356DC 120%);
+        border-bottom-right-radius: 2rem;
+        border-bottom-left-radius: 2rem; }
+      .loader .pan-loader .pan-container .handle {
+        width: 40%;
+        height: 1rem;
+        background: linear-gradient(to bottom, #FF79DA, #9356DC 120%);
+        border-radius: 1rem; }
+    .loader .pan-loader .flames {
+      display: flex;
+      flex-direction: row;
+      margin-left: 1rem;
+      gap: 1rem; }
+      .loader .pan-loader .flames .flames--1 {
+        height: 20px;
+        width: 20px;
+        background: #ff7200;
+        position: relative;
+        top: 0;
+        left: 2px;
+        border-radius: 0% 50% 70% 50%;
+        transform: rotateZ(45deg) scale(1.1);
+        filter: drop-shadow(0 0 10px #d43322);
+        animation: shake 1s ease-in-out infinite; }
+      .loader .pan-loader .flames .flames--2 {
+        height: 20px;
+        width: 20px;
+        background: #ff7200;
+        position: relative;
+        top: 0;
+        left: 2px;
+        border-radius: 0% 50% 70% 50%;
+        transform: rotateZ(45deg) scale(1.1);
+        filter: drop-shadow(0 0 10px #d43322);
+        animation: shake 1s ease-in-out infinite; }
+      .loader .pan-loader .flames .flames--3 {
+        height: 20px;
+        width: 20px;
+        background: #ff7200;
+        position: relative;
+        top: 0;
+        left: 2px;
+        border-radius: 0% 50% 70% 50%;
+        transform: rotateZ(45deg) scale(1.1);
+        filter: drop-shadow(0 0 10px #d43322);
+        animation: shake 1s ease-in-out infinite; }
