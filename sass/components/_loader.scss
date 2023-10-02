@@ -9,8 +9,9 @@
     height: 100%;
     background:$color-dark-grey-2;
     z-index:1000;
-    display: none;
-    animation: showLoader 4s ease forwards;
+    visibility: hidden;
+    opacity: 0;
+    animation: showLoader 4s linear;
 
 
     .pan-loader {
@@ -100,7 +101,7 @@
         font-family: $title-font;
         margin-top: 3rem;
         margin-left:-3rem;
-        color: $color-tertiary;
+        color: #fff;
         text-align:center;
         letter-spacing: .1rem;
         font-size: 1.8rem;

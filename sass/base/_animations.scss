@@ -118,16 +118,17 @@
 
 @keyframes showLoader {
   0% {
-    display: block;
     opacity: 1;
+    visibility: visible;
   }
 
   85%{
     opacity: 1;
+    visibility: visible;
   }
 
   100% {
     opacity: 0;
-    display: none;
+    visibility: hidden;
   }
 }

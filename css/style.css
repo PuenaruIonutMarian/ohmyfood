@@ -75,13 +75,14 @@
 
 @keyframes showLoader {
   0% {
-    display: block;
-    opacity: 1; }
+    opacity: 1;
+    visibility: visible; }
   85% {
-    opacity: 1; }
+    opacity: 1;
+    visibility: visible; }
   100% {
     opacity: 0;
-    display: none; } }
+    visibility: hidden; } }
 
 *,
 *::after,
@@ -463,21 +464,23 @@ body {
             display: flex;
             margin-left: auto;
             align-items: flex-end;
+            padding-left: 2rem;
             font-size: 1.5rem;
             font-weight: 700;
             gap: 2rem;
-            position: absolute;
+            position: relative;
             right: 2rem;
             top: 0; }
             .restaurant__menu-container .food__container .food__option .food__price--text {
-              padding-bottom: 1.5rem; }
+              padding-bottom: 1.5rem;
+              padding-left: 1rem; }
             .restaurant__menu-container .food__container .food__option .food__price .food__choice {
               display: flex;
               justify-content: center;
               align-items: center;
-              margin-right: -9rem;
+              margin-right: -10.5rem;
               width: 7rem;
-              height: 7.5rem;
+              height: 5rem;
               padding: 0 1.5rem;
               background-color: #99E2D0;
               transition: margin-right 0.4s ease-in-out; }
@@ -564,8 +567,9 @@ body {
   height: 100%;
   background: #353535;
   z-index: 1000;
-  display: none;
-  animation: showLoader 4s ease forwards; }
+  visibility: hidden;
+  opacity: 0;
+  animation: showLoader 4s linear; }
   .loader .pan-loader {
     width: 18rem;
     height: 18rem;
@@ -723,7 +727,7 @@ body {
     font-family: "Shrikhand", cursive;
     margin-top: 3rem;
     margin-left: -3rem;
-    color: #99E2D0;
+    color: #fff;
     text-align: center;
     letter-spacing: .1rem;
     font-size: 1.8rem; }

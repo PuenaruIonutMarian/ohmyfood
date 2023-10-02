@@ -163,18 +163,60 @@
                         }
                     }
 
+                    // .food__price {
+                    //     display: flex;
+                    //     margin-left: auto;
+                    //     align-items: flex-end;
+                    //     font-size: 1.5rem;
+                    //     font-weight: 700;
+                    //     gap:2rem;
+                    //     position: absolute;
+                    //     right: 2rem;
+                    //     top:0;
+                    //     &--text{
+                    //     padding-bottom: 1.5rem;
+                    //     }
+
+
+                    //     .food__choice {
+                    //         display: flex;
+                    //         justify-content: center;
+                    //         align-items: center;
+
+                    //         margin-right: -9rem;
+                    //         width: 7rem;
+                    //         height: 7.5rem;
+                    //         padding: 0 1.5rem;
+                    //         background-color: $color-tertiary;
+                    //         transition: margin-right 0.4s ease-in-out;
+
+                    //         &::after {
+                    //             content: '\f00c';
+                    //             font-family: 'FontAwesome';
+                    //             padding: .8rem;
+                    //             border-radius: 50%;
+                    //             color: $color-tertiary;
+                    //             font-size: 1.5rem;
+                    //             background-color: #fff;
+                    //             transition: transform 0.8s ease-in-out;
+                    //         }
+
+                    //     }
+                    // }
                     .food__price {
                         display: flex;
                         margin-left: auto;
                         align-items: flex-end;
+                        padding-left: 2rem;
                         font-size: 1.5rem;
                         font-weight: 700;
                         gap:2rem;
-                        position: absolute;
+                        position: relative;
                         right: 2rem;
                         top:0;
                         &--text{
                         padding-bottom: 1.5rem;
+                        padding-left: 1rem;
                         }
 
 
@@ -182,10 +224,9 @@
                             display: flex;
                             justify-content: center;
                             align-items: center;
-
-                            margin-right: -9rem;
+                            margin-right: -10.5rem;
                             width: 7rem;
-                            height: 7.5rem;
+                            height: 5rem;
                             padding: 0 1.5rem;
                             background-color: $color-tertiary;
                             transition: margin-right 0.4s ease-in-out;
@@ -203,7 +244,6 @@
 
                         }
                     }
-
 
                 &:hover .food__choice{
                 // &:focus .food__choice{
