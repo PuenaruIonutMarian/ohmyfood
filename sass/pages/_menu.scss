@@ -77,11 +77,21 @@
 
         .restaurant__menu-title {
             display: flex;
-            gap: 2rem;
-            justify-content: center;
+            gap: 1rem;
             align-items: center;
+            padding-right: 3rem;
 
-            .restaurant-heart{
+            @media only screen and (min-width: 375px) {
+                gap: 4rem;
+                margin-left: -2.5rem;
+             }
+            
+            @media only screen and (min-width: 400px) {
+                margin-left: 0;
+            } 
+
+
+            .restaurant-heart {
                 margin-bottom: 2rem;
                 font-size: 2.4rem;
             }
@@ -90,7 +100,6 @@
                 font-family: $title-font;
                 font-weight: 400;
                 font-size: 2.8rem;
-                padding-right: 1.5rem;
             }
         }
 
@@ -134,17 +143,16 @@
                 &__option {
                     animation: moveInRight 1s ease-in;
                     display: flex;
-                    padding: 1.5rem;
                     width: 100%;
-                    // //////////////////////
                     position: relative;
                     overflow: hidden;
-                    // justify-content: space-between;    
-                    // /////////////////
+
 
                     .food__description {
                         display: flex;
                         flex-direction: column;
+                        justify-content: center;
+                        padding-left: 1.5rem;
                         gap: .5rem;
                         @include dots;
 
@@ -163,46 +171,6 @@
                         }
                     }
 
-                    // .food__price {
-                    //     display: flex;
-                    //     margin-left: auto;
-                    //     align-items: flex-end;
-                    //     font-size: 1.5rem;
-                    //     font-weight: 700;
-                    //     gap:2rem;
-                    //     position: absolute;
-                    //     right: 2rem;
-                    //     top:0;
-                    //     &--text{
-                    //     padding-bottom: 1.5rem;
-                    //     }
-
-
-                    //     .food__choice {
-                    //         display: flex;
-                    //         justify-content: center;
-                    //         align-items: center;
-
-                    //         margin-right: -9rem;
-                    //         width: 7rem;
-                    //         height: 7.5rem;
-                    //         padding: 0 1.5rem;
-                    //         background-color: $color-tertiary;
-                    //         transition: margin-right 0.4s ease-in-out;
-
-                    //         &::after {
-                    //             content: '\f00c';
-                    //             font-family: 'FontAwesome';
-                    //             padding: .8rem;
-                    //             border-radius: 50%;
-                    //             color: $color-tertiary;
-                    //             font-size: 1.5rem;
-                    //             background-color: #fff;
-                    //             transition: transform 0.8s ease-in-out;
-                    //         }
-
-                    //     }
-                    // }
                     .food__price {
                         display: flex;
                         margin-left: auto;
@@ -210,13 +178,12 @@
                         padding-left: 2rem;
                         font-size: 1.5rem;
                         font-weight: 700;
-                        gap:2rem;
                         position: relative;
                         right: 2rem;
-                        top:0;
-                        &--text{
-                        padding-bottom: 1.5rem;
-                        padding-left: 1rem;
+                        top: 0;
+
+                        &--text {
+                            padding: 0 3rem 1.5rem .5rem;
                         }
 
 
@@ -226,7 +193,7 @@
                             align-items: center;
                             margin-right: -10.5rem;
                             width: 7rem;
-                            height: 5rem;
+                            height: 7.2rem;
                             padding: 0 1.5rem;
                             background-color: $color-tertiary;
                             transition: margin-right 0.4s ease-in-out;
@@ -245,10 +212,9 @@
                         }
                     }
 
-                &:hover .food__choice{
-                // &:focus .food__choice{
-                    margin-right: -2rem;
-                }
+                    &:hover .food__choice {
+                        margin-right: -2rem;
+                    }
 
 
                 }

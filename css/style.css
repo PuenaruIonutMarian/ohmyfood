@@ -200,9 +200,11 @@ body {
     .options {
       max-width: 1080px;
       margin: 0 auto;
-      padding-left: 0;
       padding-right: 0;
       align-items: center; } }
+  @media only screen and (min-width: 1123px) {
+    .options {
+      padding-left: 0; } }
   .options__container {
     display: flex;
     justify-content: center;
@@ -393,17 +395,23 @@ body {
     justify-content: center; }
     .restaurant__menu-container .restaurant__menu-title {
       display: flex;
-      gap: 2rem;
-      justify-content: center;
-      align-items: center; }
+      gap: 1rem;
+      align-items: center;
+      padding-right: 3rem; }
+      @media only screen and (min-width: 375px) {
+        .restaurant__menu-container .restaurant__menu-title {
+          gap: 4rem;
+          margin-left: -2.5rem; } }
+      @media only screen and (min-width: 400px) {
+        .restaurant__menu-container .restaurant__menu-title {
+          margin-left: 0; } }
       .restaurant__menu-container .restaurant__menu-title .restaurant-heart {
         margin-bottom: 2rem;
         font-size: 2.4rem; }
       .restaurant__menu-container .restaurant__menu-title .restaurant__title {
         font-family: "Shrikhand", cursive;
         font-weight: 400;
-        font-size: 2.8rem;
-        padding-right: 1.5rem; }
+        font-size: 2.8rem; }
     .restaurant__menu-container .food__container {
       display: flex;
       flex-direction: column;
@@ -435,13 +443,14 @@ body {
         .restaurant__menu-container .food__container .food__option {
           animation: moveInRight 1s ease-in;
           display: flex;
-          padding: 1.5rem;
           width: 100%;
           position: relative;
           overflow: hidden; }
           .restaurant__menu-container .food__container .food__option .food__description {
             display: flex;
             flex-direction: column;
+            justify-content: center;
+            padding-left: 1.5rem;
             gap: .5rem;
             text-overflow: ellipsis;
             overflow: hidden;
@@ -467,20 +476,18 @@ body {
             padding-left: 2rem;
             font-size: 1.5rem;
             font-weight: 700;
-            gap: 2rem;
             position: relative;
             right: 2rem;
             top: 0; }
             .restaurant__menu-container .food__container .food__option .food__price--text {
-              padding-bottom: 1.5rem;
-              padding-left: 1rem; }
+              padding: 0 3rem 1.5rem .5rem; }
             .restaurant__menu-container .food__container .food__option .food__price .food__choice {
               display: flex;
               justify-content: center;
               align-items: center;
               margin-right: -10.5rem;
               width: 7rem;
-              height: 5rem;
+              height: 7.2rem;
               padding: 0 1.5rem;
               background-color: #99E2D0;
               transition: margin-right 0.4s ease-in-out; }
