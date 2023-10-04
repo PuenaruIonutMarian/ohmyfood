@@ -1,15 +1,17 @@
     .heart-button {
-      cursor: pointer;
+      // cursor: pointer;
       display: inline-block;
-      font-size: 1.8rem;
-      position: relative;
+      // font-size: 1.8rem;
+      // position: relative;
+
     }
 
     .heart-button .fa-heart {
-      position: absolute;
-      top: 0;
-      left: 0;
-      transition: opacity 0.3s ease-in-out;
+      // position: absolute;
+      // top: 0;
+      // left: 0;
+      // transition: opacity 0.3s ease-in-out;
+      
     }
 
 .fa-heart-solid{
@@ -21,15 +23,40 @@
     cursor: pointer;
 }
 
+
     .heart-button:hover .fa-heart-empty {
-      opacity:0; 
-      
+      opacity:0;   
     }
 
+
     .heart-button:hover .fa-heart-solid {
-      
       opacity: 1;
     }
 
+/* Hide the checkbox input */
+.heart-checkbox {
+  display: none;
+}
 
+/* Style the label to look like the heart icon */
+.heart-label {
+  cursor: pointer;
+  font-size: 1.8rem;
+  position: relative;
+}
 
+.heart-label i {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Change heart appearance when checked (tapped) */
+.heart-checkbox:checked + .heart-label .fa-heart-empty {
+  opacity: 0;
+}
+
+.heart-checkbox:checked + .heart-label .fa-heart-solid {
+  opacity: 1;
+}

@@ -84,16 +84,19 @@
             @media only screen and (min-width: 375px) {
                 gap: 4rem;
                 margin-left: -2.5rem;
-             }
-            
+            }
+
             @media only screen and (min-width: 400px) {
                 margin-left: 0;
-            } 
+            }
 
 
             .restaurant-heart {
-                margin-bottom: 2rem;
-                font-size: 2.4rem;
+                margin-bottom: 2.2rem;
+
+                &-button {
+                    font-size: 2.4rem;
+                }
             }
 
             .restaurant__title {
@@ -212,10 +215,14 @@
                         }
                     }
 
-                    &:hover .food__choice {
+                    &:hover .food__choice,
+                    &:focus .food__choice {
                         margin-right: -2rem;
                     }
 
+                    &:focus {
+                        outline: none;
+                    }
 
                 }
 

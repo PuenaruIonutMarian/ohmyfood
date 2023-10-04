@@ -406,8 +406,9 @@ body {
         .restaurant__menu-container .restaurant__menu-title {
           margin-left: 0; } }
       .restaurant__menu-container .restaurant__menu-title .restaurant-heart {
-        margin-bottom: 2rem;
-        font-size: 2.4rem; }
+        margin-bottom: 2.2rem; }
+        .restaurant__menu-container .restaurant__menu-title .restaurant-heart-button {
+          font-size: 2.4rem; }
       .restaurant__menu-container .restaurant__menu-title .restaurant__title {
         font-family: "Shrikhand", cursive;
         font-weight: 400;
@@ -500,8 +501,11 @@ body {
                 font-size: 1.5rem;
                 background-color: #fff;
                 transition: transform 0.8s ease-in-out; }
-          .restaurant__menu-container .food__container .food__option:hover .food__choice {
+          .restaurant__menu-container .food__container .food__option:hover .food__choice,
+          .restaurant__menu-container .food__container .food__option:focus .food__choice {
             margin-right: -2rem; }
+          .restaurant__menu-container .food__container .food__option:focus {
+            outline: none; }
     .restaurant__menu-container .restaurant__menu-button {
       animation: moveInBottom 1s ease-in; }
       .restaurant__menu-container .restaurant__menu-button .btn {
@@ -539,16 +543,7 @@ body {
   cursor: pointer; }
 
 .heart-button {
-  cursor: pointer;
-  display: inline-block;
-  font-size: 1.8rem;
-  position: relative; }
-
-.heart-button .fa-heart {
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: opacity 0.3s ease-in-out; }
+  display: inline-block; }
 
 .fa-heart-solid {
   background: linear-gradient(to bottom, #FF79DA, #9356DC 120%);
@@ -564,6 +559,29 @@ body {
 .heart-button:hover .fa-heart-solid {
   opacity: 1; }
 
+/* Hide the checkbox input */
+.heart-checkbox {
+  display: none; }
+
+/* Style the label to look like the heart icon */
+.heart-label {
+  cursor: pointer;
+  font-size: 1.8rem;
+  position: relative; }
+
+.heart-label i {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.3s ease-in-out; }
+
+/* Change heart appearance when checked (tapped) */
+.heart-checkbox:checked + .heart-label .fa-heart-empty {
+  opacity: 0; }
+
+.heart-checkbox:checked + .heart-label .fa-heart-solid {
+  opacity: 1; }
+
 .loader {
   position: fixed;
   padding: 0;
@@ -576,7 +594,7 @@ body {
   z-index: 1000;
   visibility: hidden;
   opacity: 0;
-  animation: showLoader 4s linear; }
+  animation: showLoader 3s linear; }
   .loader .pan-loader {
     width: 18rem;
     height: 18rem;
