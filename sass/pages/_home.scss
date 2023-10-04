@@ -1,3 +1,4 @@
+/* Style pour la classe .location */
 .location {
     display: flex;
     gap: 1.7rem;
@@ -9,6 +10,7 @@
     height: 5rem;
 }
 
+/* Style pour la classe .hero */
 .hero {
     display: flex;
     align-items: center;
@@ -17,6 +19,7 @@
     padding: 3rem 0 5rem 0;
     background-color: $color-light-grey-1;
 
+    /* Style pour le titre de la classe .hero */
     &__title {
         @include title_style;
         display: inline-block;
@@ -24,12 +27,14 @@
         padding: 1rem;
         margin: 0 5.8rem 0 4.2rem;
 
+        /* Média query pour les écrans de taille supérieure ou égale à 768px */
         @media only screen and (min-width: 768px) {
             font-size: 2.5rem;
         }
 
     }
 
+    /* Style pour le sous-titre de la classe .hero */
     &__subtitle {
         font-size: 1.8rem;
         font-weight: 300;
@@ -37,27 +42,30 @@
         display: inline-block;
         text-align: center;
         margin-bottom: 3rem;
-
     }
 }
 
-
+/* Style pour la classe .options */
 .options {
     display: flex;
     flex-direction: column;
     gap: 2.5rem;
     padding: 4.8rem 2rem 6rem 2rem;
 
+    /* Média queries pour les écrans de 768px ou superieure */
     @media only screen and (min-width: 768px) {
         max-width: 1080px;
         margin: 0 auto;
         padding-right: 0;
         align-items: center;
     }
+
+    /* Média query pour les écrans de taille supérieure ou égale à 1123px */
     @media only screen and (min-width: 1123px) {
          padding-left: 0;
     }
 
+    /* Style pour le conteneur .options__container */
     &__container {
         display: flex;
         justify-content: center;
@@ -65,6 +73,7 @@
         gap: 2rem;
         width: 100%;
 
+        /* Média query pour les écrans de taille supérieure ou égale à 768px */
         @media only screen and (min-width: 768px) {
             flex-direction: row;
             justify-content: space-between;
@@ -72,6 +81,7 @@
         }
     }
 
+    /* Style pour le titre .options__title */
     &__title {
         @include title_style;
                 @media only screen and (min-width: 768px) {
@@ -82,17 +92,20 @@
     }
 
 
+    /* Style pour la classe .options__card */
     &__card {
         background-color: $color-light-grey-1;
         padding: 2rem 3.3rem;
         align-items: center;
         justify-content: flex-start;
         margin-left: 1rem;
-                @media only screen and (min-width: 768px) {
+
+        /* Média query pour les écrans de taille supérieure ou égale à 768px */
+        @media only screen and (min-width: 768px) {
             width: 100%;
         }
 
-
+        /* Style pour le contenu .options__card--content */
         &--content {
             display: flex;
             justify-content: center;
@@ -100,11 +113,13 @@
             font-size: 1.6rem;
             font-weight: 500;
 
+            /* Style pour l'icône .fa-store */
             & .fa-store {
                 color: $color-primary;
             }
         }
 
+        /* Style pour le numéro .options__card--number */
         &--number {
             background-color: $color-primary;
             color: #fff;
@@ -122,12 +137,13 @@
     }
 }
 
-
+/* Style pour la classe .restaurants */
 .restaurants {
     display: flex;
     justify-content: center;
     background-color: $color-light-grey-1;
 
+    /* Style pour le conteneur .restaurants__container */
     &__container {
         display: flex;
         flex-direction: column;
@@ -137,6 +153,7 @@
         max-width: 1080px;
     }
 
+    /* Style pour le titre .restaurants__title */
     &__title {
         display: flex;
         max-width: 49rem;
@@ -144,13 +161,14 @@
         width: 100%;
     }
 
+    /* Style pour le conteneur des cartes .restaurants__cards-container */
     &__cards-container {
         display: flex;
         flex-direction: column;
         gap: 1.8rem;
-        // margin: 0 auto;
         width: 100%;
 
+        /* Média query pour les écrans de taille supérieure ou égale à 768px */
         @media only screen and (min-width: 768px) {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -158,13 +176,12 @@
             column-gap: 10rem;
         }
 
-
-
-
+        /* Style pour les deux premières liaisons .restaurant__link */
         a.restaurant__link:nth-child(-n+2) {
             .restaurant-card {
                 position: relative;
 
+                /* Style pour le texte 'Nouveau' */
                 &::before {
                     content: 'Nouveau';
                     font-size: 1.4rem;
@@ -183,19 +200,14 @@
             }
         }
 
-
+        /* Style pour la classe .restaurant__link */
         .restaurant__link {
             width: 100%;
             max-width: 74rem;
             text-decoration: none;
             color: black;
 
-            // @media only screen and (min-width: 768px) {
-            //     max-width: 49.86rem;
-            // }
-
-
-
+            /* Style pour la carte du restaurant .restaurant-card */
             .restaurant-card {
                 display: flex;
                 flex-direction: column;
@@ -205,6 +217,7 @@
                 height: 24rem;
                 overflow: hidden;
 
+                /* Style pour l'image .restaurant-card__image */
                 &__image {
                     width: 100%;
                     height: 70%;
@@ -212,12 +225,13 @@
                     object-position: center 62%;
                 }
 
+                /* Style pour le contenu .restaurant-card__content */
                 &__content {
                     display: flex;
                     justify-content: space-between;
-
                     padding: 1.5rem 2.5rem 1.5rem 1.3rem;
 
+                    /* Style pour le texte .restaurant-card__text */
                     .restaurant-card__text {
                         & h3 {
                             font-size: 1.8rem;
@@ -232,12 +246,12 @@
                         }
                     }
 
+                    /* Style pour l'icône de notation .restaurant-card__rating */
                     .restaurant-card__rating {
                         width: 2.5rem;
                         height: 2.5rem;
                         position: relative;
                     }
-
                 }
             }
         }

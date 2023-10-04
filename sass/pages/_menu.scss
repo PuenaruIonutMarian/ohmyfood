@@ -1,6 +1,8 @@
+/* Styles pour l'en-tête */
 .header {
     position: relative;
 
+    /* Styles pour le bouton de retour */
     &__return {
         position: absolute;
         color: black;
@@ -10,33 +12,35 @@
         padding: .5rem;
 
         i {
+            /* Taille de police de l'icône */
             font-size: 1.8rem;
         }
     }
 }
 
 
-
+/* Styles pour la section principale du restaurant */
 .restaurant__main {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
-
-
+    /* Styles pour l'image du restaurant */
     .restaurant__img {
         display: flex;
         justify-content: center;
         height: 25rem;
 
+        /* Styles pour l'image de restaurant */
         &--photo {
             width: 100%;
-            object-fit: cover;
-            object-position: center bottom;
+            object-fit: cover; /* Ajustement de l'image pour couvrir la zone */
+            object-position: center bottom; /* Position de l'image dans le conteneur */
         }
     }
 
+     /* Styles pour les écrans de grande taille */
     @media only screen and (min-width: 768px) {
         .restaurant__img {
             display: flex;
@@ -52,20 +56,24 @@
     }
 }
 
+/* Styles pour la section de restaurant */
 .restaurant {
     width: 100%;
     display: flex;
     flex-direction: column;
     background-color: $color-light-grey-1;
+    /* Coins arrondis pour le conteneur du restaurant */
     border-top-left-radius: 5rem;
     border-top-right-radius: 5rem;
     max-width: 105rem;
     margin-top: -5rem;
 
+    /* Styles pour les écrans de grande taille */
     @media only screen and (min-width: 768px) {
         margin-top: -3rem;
     }
 
+    /* Styles pour le conteneur du menu du restaurant */
     &__menu-container {
         display: flex;
         flex-direction: column;
@@ -75,22 +83,25 @@
         justify-content: center;
 
 
+        /* Styles pour le titre du menu du restaurant */
         .restaurant__menu-title {
             display: flex;
             gap: 1rem;
             align-items: center;
             padding-right: 3rem;
 
+            /* Styles pour les écrans de petite taille */
             @media only screen and (min-width: 375px) {
                 gap: 4rem;
                 margin-left: -2.5rem;
             }
 
+            /* Styles pour les écrans de taille moyenne */
             @media only screen and (min-width: 400px) {
                 margin-left: 0;
             }
 
-
+            /* Styles pour l'icône de cœur */
             .restaurant-heart {
                 margin-bottom: 2.2rem;
 
@@ -99,6 +110,7 @@
                 }
             }
 
+            /* Styles pour le titre du restaurant */
             .restaurant__title {
                 font-family: $title-font;
                 font-weight: 400;
@@ -106,33 +118,39 @@
             }
         }
 
+        /* Styles pour le conteneur des plats du menu */
         .food__container {
             display: flex;
             flex-direction: column;
             gap: 4rem;
             width: 95%;
 
+            /* Styles pour les écrans de grande taille */
             @media only screen and (min-width: 768px) {
                 width: 60%;
             }
 
+            /* Styles pour les éléments de menu */
             .food {
                 display: flex;
                 flex-direction: column;
                 gap: 1.2rem;
                 align-items: flex-start;
 
+                /* Styles pour les titres de plat */
                 &__title {
                     animation-name: moveInLeft;
                     animation-duration: 1s;
                     animation-timing-function: ease-in;
 
+                    /* Styles pour le texte du titre */
                     &-text {
                         font-size: 1.6rem;
                         font-weight: 300;
                         text-transform: uppercase;
                     }
 
+                    /* Styles pour la ligne sous le titre */
                     &::after {
                         margin-top: .3rem;
                         display: flex;
@@ -143,37 +161,41 @@
                     }
                 }
 
+                /* Styles pour les options de plat */
                 &__option {
                     animation: moveInRight 1s ease-in;
                     display: flex;
                     width: 100%;
                     position: relative;
-                    overflow: hidden;
+                    overflow: hidden; //pour cache le conteneur de l'icone check
 
-
+                    /* Styles pour la description du plat */
                     .food__description {
                         display: flex;
                         flex-direction: column;
                         justify-content: center;
                         padding-left: 1.5rem;
                         gap: .5rem;
-                        @include dots;
+                        @include dots; /* Utilisation du mixin pour la troncature du texte */
 
+                        /* Styles pour le nom du plat */
                         .food__name {
                             width: 100%;
                             font-size: 1.8rem;
                             font-weight: 500;
-                            @include dots;
+                            @include dots; /* Utilisation du mixin pour la troncature du texte */
                         }
 
+                        /* Styles pour les ingrédients du plat */
                         .food__ingredients {
                             width: 100%;
                             font-size: 1.5rem;
                             font-weight: 300;
-                            @include dots;
+                            @include dots; /* Utilisation du mixin pour la troncature du texte */
                         }
                     }
 
+                    /* Styles pour le prix du plat */
                     .food__price {
                         display: flex;
                         margin-left: auto;
@@ -185,11 +207,12 @@
                         right: 2rem;
                         top: 0;
 
+                        /* Styles pour le texte de prix */
                         &--text {
                             padding: 0 3rem 1.5rem .5rem;
                         }
 
-
+                        /* Styles pour l'icône de choix de plat */
                         .food__choice {
                             display: flex;
                             justify-content: center;
@@ -201,6 +224,7 @@
                             background-color: $color-tertiary;
                             transition: margin-right 0.4s ease-in-out;
 
+                            /* Styles pour l'icône de vérification */
                             &::after {
                                 content: '\f00c';
                                 font-family: 'FontAwesome';
@@ -211,16 +235,17 @@
                                 background-color: #fff;
                                 transition: transform 0.8s ease-in-out;
                             }
-
                         }
                     }
 
+                    /* Styles pour l'animation d'agrandissement au survol */
                     &:hover .food__choice,
                     &:focus .food__choice {
                         margin-right: -2rem;
                     }
 
                     &:focus {
+                        /* Suppression de la bordure de focus */
                         outline: none;
                     }
 
@@ -229,11 +254,12 @@
             }
         }
 
+        /* Styles pour le bouton du menu du restaurant */
         .restaurant__menu-button {
             animation: moveInBottom 1s ease-in;
 
             .btn {
-                width: 18.6rem;
+                width: 18.6rem;/* Largeur du bouton */
             }
         }
     }

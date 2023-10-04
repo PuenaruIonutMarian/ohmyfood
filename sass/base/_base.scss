@@ -1,3 +1,4 @@
+/* Réinitialisation des marges, des rembourrages et de la boîte de modélisation pour tous les éléments du DOM */
 *,
 *::after,
 *::before {
@@ -6,12 +7,16 @@
     box-sizing: inherit;
 }
 
+/* Définition de la taille de police de base pour l'élément HTML à 62.5% (10 pixels par rapport à la taille de police par défaut du navigateur) */
 html {
     font-size: 62.5%;
     font-family: $text-font;
     scroll-behavior: smooth;
+    max-width: 198rem;
+    margin: 0 auto;
 }
 
+/* Définition de la boîte de modélisation pour l'élément body */
 body {
     box-sizing: border-box;
 

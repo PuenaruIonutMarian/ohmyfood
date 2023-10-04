@@ -1,3 +1,4 @@
+/* Style pour le pied de page */
 .footer {
     background-color: $color-dark-grey-2;
     color: #fff;
@@ -6,18 +7,21 @@
     flex-direction: column;
     gap: 1.6rem;
 
+    /* Média query pour les écrans de taille supérieure ou égale à 768px */
     @media only screen and (min-width: 768px) {
         padding-top: 6rem;
         flex-direction: row-reverse;
         gap: 10rem;
     }
 
+    /* Style pour le titre du pied de page */
     &__title {
         font-family: $title-font;
         font-weight: 400;
         font-size: 1.8rem;
     }
 
+    /* Style pour la navigation du pied de page */
     &__nav {
         display: flex;
         gap: .7rem;
@@ -26,6 +30,7 @@
         font-size: 1.6rem;
         font-weight: 500;
 
+        /* Média query pour les écrans de taille supérieure ou égale à 768px */
         @media only screen and (min-width: 768px) {
             flex-direction: row;
             flex-wrap: wrap-reverse;
@@ -33,22 +38,27 @@
             align-items: center;
         }
 
+         /* Style pour chaque élément de navigation */
         &-item {
             display: flex;
             gap: 1rem;
 
+             /* Style pour les deux derniers éléments de navigation */
             &:nth-last-child(-n+2) {
                 font-weight: 400;
             }
 
+            /* Rotation de l'icône de poignée de main */
             &:nth-last-child(3) .fa-handshake {
                 transform: rotate(-25deg);
             }
 
+            /* Marge à droite pour l'icône de couverts */
             &:nth-last-child(4) .fa-utensils {
                 margin-right: .7rem;                
             }
 
+            /* Marge à droite pour le troisième élément */
             &:nth-last-child(3) {
                 @media only screen and (min-width: 768px) {
                     margin-right: 2rem;
@@ -56,6 +66,7 @@
             }
 
 
+             /* Style pour les liens de navigation dans le pied de page */
             .footer__nav-link {
                 text-decoration: none;
                 color: #fff;

@@ -1,4 +1,4 @@
-
+/* Style pour l'élément de chargement (loader) */
 .loader {
     position:fixed;
     padding:0;
@@ -13,14 +13,14 @@
     opacity: 0;
     animation: showLoader 3s linear;
 
-
+     /* Conteneur du panneau de chargement */
     .pan-loader {
         width: 18rem;
         height: 18rem;
         margin: 40vh auto;
         position: relative;
 
-
+        /* Animation de la vapeur */
         .steams {
             @for $i from 1 through 8 {
                 .steams--#{$i} {
@@ -28,44 +28,47 @@
                 }
             }
 
+            /* Différentes animations pour les éléments de vapeur */
             &--1 {
-                animation: steam-one 4s ease-out;
+                animation: steam-one 4s;
             }
 
             &--2 {
-                animation: steam-two 4s ease-out .5s infinite;
+                animation: steam-two 4s .5s;
             }
 
             &--3 {
-                animation: steam-three 4s ease-out .1s infinite;
+                animation: steam-three 4s .1s;
             }
 
 
             &--4 {
-                animation: steam-four 4s ease-out 1.5s infinite;
+                animation: steam-four 4s 1.5s;
             }
 
             &--5 {
-                animation: steam-one 4s ease-out 2s infinite;
+                animation: steam-one 4s 2s;
             }
 
             &--6 {
-                animation: steam-two 4s ease-out 2.5s infinite;
+                animation: steam-two 4s 2.5s;
             }
 
             &--7 {
-                animation: steam-three 4s ease-out 3s infinite;
+                animation: steam-three 4s 3s;
             }
 
             &--8 {
-                animation: steam-four 4s ease-out 3.5s infinite;
+                animation: steam-four 4s 3.5s;
             }
         }
 
+        /* Conteneur style casserole */
         .pan-container {
             display: flex;
             width: 100%;
 
+            /* La casserole */
             .pan {
                 width: 60%;
                 height: 8rem;
@@ -73,7 +76,7 @@
                 border-bottom-right-radius: 2rem;
                 border-bottom-left-radius: 2rem;
             }
-
+            /* Poignée de la casserole */
             .handle {
                 width: 40%;
                 height: 1rem;
@@ -82,6 +85,7 @@
             }
         }
 
+        /* Animation des flammes */
         .flames {
             display: flex;
             flex-direction: row;
@@ -90,13 +94,13 @@
 
             @for $i from 1 through 3 {
                 .flames--#{$i} {
-                    @include fire;
+                    @include fire; /* Utilisation du mixin fire pour chaque flamme */
                 }
             }
         }
     }
 
-
+     /* Texte de devise ou slogan */
     .motto{
         font-family: $title-font;
         margin-top: 3rem;
@@ -105,6 +109,8 @@
         text-align:center;
         letter-spacing: .1rem;
         font-size: 1.8rem;
+        
+        /* Style pour différents textes de devise */
         &-text--1{margin-bottom: 2rem;}
     }
 }

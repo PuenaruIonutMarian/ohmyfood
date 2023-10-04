@@ -1,3 +1,4 @@
+/* Mixin pour le style du titre */
 @mixin title_style {
     font-family: Roboto;
     font-size: 1.6rem;
@@ -6,7 +7,7 @@
     line-height: normal;
 }
 
-
+/* Mixin pour les points de suspension en cas de texte trop long */
 @mixin dots{
     text-overflow: ellipsis;
     overflow: hidden;
@@ -14,6 +15,7 @@
 }
 
 
+/* Mixin pour représenter une flamme */
 @mixin fire{
   height:20px;
   width:20px;
@@ -27,6 +29,7 @@
   animation: shake 1s ease-in-out infinite;
 }
 
+/* Mixin pour représenter de la vapeur */
 @mixin steam {
         position: absolute;
         width: 5rem;
@@ -37,6 +40,6 @@
         margin-top: -2.5rem;
         z-index: 0;
         opacity: 0;
-        // animation-timing-function: ease-out;
-        // animation-iteration-count: infinite;
+        animation-timing-function: ease-out;
+        animation-iteration-count: infinite;
 }

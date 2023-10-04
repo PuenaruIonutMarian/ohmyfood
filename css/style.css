@@ -1,3 +1,10 @@
+@charset "UTF-8";
+/* Mixin pour le style du titre */
+/* Mixin pour les points de suspension en cas de texte trop long */
+/* Mixin pour représenter une flamme */
+/* Mixin pour représenter de la vapeur */
+/* Définition d'une ombre avec une couleur et un flou spécifiques */
+/* Animation pour faire apparaître un élément depuis la gauche */
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -8,6 +15,7 @@
     opacity: 1;
     transform: translateX(0); } }
 
+/* Animation pour faire apparaître un élément depuis la droite */
 @keyframes moveInRight {
   0% {
     opacity: 0;
@@ -18,6 +26,7 @@
     opacity: 1;
     transform: translateX(0); } }
 
+/* Animation pour faire apparaître un élément depuis le bas */
 @keyframes moveInBottom {
   0% {
     opacity: 0;
@@ -26,6 +35,7 @@
     opacity: 1;
     transform: translate(0); } }
 
+/* Animation pour faire apparaître un élément en le déplaçant horizontalement depuis la droite */
 @keyframes moveInBtn {
   0% {
     opacity: 0;
@@ -34,6 +44,7 @@
     opacity: 1;
     transform: translateX(0); } }
 
+/* Animation pour secouer un élément */
 @keyframes shake {
   0%,
   100% {
@@ -41,6 +52,7 @@
   50% {
     transform: rotateZ(50deg) scale(0.9); } }
 
+/* Animation pour la vapeur numéro un */
 @keyframes steam-one {
   0% {
     transform: translateY(0) translateX(0) scale(0.25);
@@ -49,6 +61,7 @@
     transform: translateY(-20rem) translateX(2rem) scale(1);
     opacity: 0; } }
 
+/* Animation pour la vapeur numéro deux */
 @keyframes steam-two {
   0% {
     transform: translateY(0) translateX(1rem) scale(0.25);
@@ -57,6 +70,7 @@
     transform: translateY(-20rem) translateX(-1rem) scale(1);
     opacity: 0; } }
 
+/* Animation pour la vapeur numéro trois */
 @keyframes steam-three {
   0% {
     transform: translateY(0) translateX(-1rem) scale(0.25);
@@ -65,6 +79,7 @@
     transform: translateY(-20rem) translateX(-1rem) scale(1);
     opacity: 0; } }
 
+/* Animation pour la vapeur numéro quatre */
 @keyframes steam-four {
   0% {
     transform: translateY(0) translateX(0) scale(0.25);
@@ -73,6 +88,7 @@
     transform: translateY(-20rem) translateX(-2rem) scale(1);
     opacity: 0; } }
 
+/* Animation pour afficher un chargeur */
 @keyframes showLoader {
   0% {
     opacity: 1;
@@ -84,6 +100,7 @@
     opacity: 0;
     visibility: hidden; } }
 
+/* Réinitialisation des marges, des rembourrages et de la boîte de modélisation pour tous les éléments du DOM */
 *,
 *::after,
 *::before {
@@ -91,30 +108,40 @@
   padding: 0;
   box-sizing: inherit; }
 
+/* Définition de la taille de police de base pour l'élément HTML à 62.5% (10 pixels par rapport à la taille de police par défaut du navigateur) */
 html {
   font-size: 62.5%;
   font-family: "Roboto", sans-serif;
-  scroll-behavior: smooth; }
+  scroll-behavior: smooth;
+  max-width: 198rem;
+  margin: 0 auto; }
 
+/* Définition de la boîte de modélisation pour l'élément body */
 body {
   box-sizing: border-box; }
 
+/* Style pour l'en-tête (header) */
 .header {
   display: flex;
-  align-items: center; }
+  align-items: center;
+  /* Style pour le titre de l'en-tête */ }
   .header__title {
     font-family: "Shrikhand", cursive;
     margin: 1.3rem auto;
     font-weight: 500;
     font-size: 3rem; }
 
+/* Style pour le pied de page */
 .footer {
   background-color: #353535;
   color: #fff;
   padding: 2.2rem 2.5rem;
   display: flex;
   flex-direction: column;
-  gap: 1.6rem; }
+  gap: 1.6rem;
+  /* Média query pour les écrans de taille supérieure ou égale à 768px */
+  /* Style pour le titre du pied de page */
+  /* Style pour la navigation du pied de page */ }
   @media only screen and (min-width: 768px) {
     .footer {
       padding-top: 6rem;
@@ -130,7 +157,9 @@ body {
     flex-direction: column;
     list-style: none;
     font-size: 1.6rem;
-    font-weight: 500; }
+    font-weight: 500;
+    /* Média query pour les écrans de taille supérieure ou égale à 768px */
+    /* Style pour chaque élément de navigation */ }
     @media only screen and (min-width: 768px) {
       .footer__nav {
         flex-direction: row;
@@ -139,7 +168,12 @@ body {
         align-items: center; } }
     .footer__nav-item {
       display: flex;
-      gap: 1rem; }
+      gap: 1rem;
+      /* Style pour les deux derniers éléments de navigation */
+      /* Rotation de l'icône de poignée de main */
+      /* Marge à droite pour l'icône de couverts */
+      /* Marge à droite pour le troisième élément */
+      /* Style pour les liens de navigation dans le pied de page */ }
       .footer__nav-item:nth-last-child(-n+2) {
         font-weight: 400; }
       .footer__nav-item:nth-last-child(3) .fa-handshake {
@@ -153,6 +187,7 @@ body {
         text-decoration: none;
         color: #fff; }
 
+/* Style pour la classe .location */
 .location {
   display: flex;
   gap: 1.7rem;
@@ -163,13 +198,16 @@ body {
   background-color: #EAEAEA;
   height: 5rem; }
 
+/* Style pour la classe .hero */
 .hero {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   padding: 3rem 0 5rem 0;
-  background-color: #F6F6F6; }
+  background-color: #F6F6F6;
+  /* Style pour le titre de la classe .hero */
+  /* Style pour le sous-titre de la classe .hero */ }
   .hero__title {
     font-family: Roboto;
     font-size: 1.6rem;
@@ -179,7 +217,8 @@ body {
     display: inline-block;
     text-align: center;
     padding: 1rem;
-    margin: 0 5.8rem 0 4.2rem; }
+    margin: 0 5.8rem 0 4.2rem;
+    /* Média query pour les écrans de taille supérieure ou égale à 768px */ }
     @media only screen and (min-width: 768px) {
       .hero__title {
         font-size: 2.5rem; } }
@@ -191,11 +230,17 @@ body {
     text-align: center;
     margin-bottom: 3rem; }
 
+/* Style pour la classe .options */
 .options {
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
-  padding: 4.8rem 2rem 6rem 2rem; }
+  padding: 4.8rem 2rem 6rem 2rem;
+  /* Média queries pour les écrans de 768px ou superieure */
+  /* Média query pour les écrans de taille supérieure ou égale à 1123px */
+  /* Style pour le conteneur .options__container */
+  /* Style pour le titre .options__title */
+  /* Style pour la classe .options__card */ }
   @media only screen and (min-width: 768px) {
     .options {
       max-width: 1080px;
@@ -210,7 +255,8 @@ body {
     justify-content: center;
     flex-direction: column;
     gap: 2rem;
-    width: 100%; }
+    width: 100%;
+    /* Média query pour les écrans de taille supérieure ou égale à 768px */ }
     @media only screen and (min-width: 768px) {
       .options__container {
         flex-direction: row;
@@ -232,7 +278,10 @@ body {
     padding: 2rem 3.3rem;
     align-items: center;
     justify-content: flex-start;
-    margin-left: 1rem; }
+    margin-left: 1rem;
+    /* Média query pour les écrans de taille supérieure ou égale à 768px */
+    /* Style pour le contenu .options__card--content */
+    /* Style pour le numéro .options__card--number */ }
     @media only screen and (min-width: 768px) {
       .options__card {
         width: 100%; } }
@@ -241,7 +290,8 @@ body {
       justify-content: center;
       gap: 2rem;
       font-size: 1.6rem;
-      font-weight: 500; }
+      font-weight: 500;
+      /* Style pour l'icône .fa-store */ }
       .options__card--content .fa-store {
         color: #9356DC; }
     .options__card--number {
@@ -257,10 +307,14 @@ body {
       margin-left: -4.5rem;
       margin-right: 2.5rem; }
 
+/* Style pour la classe .restaurants */
 .restaurants {
   display: flex;
   justify-content: center;
-  background-color: #F6F6F6; }
+  background-color: #F6F6F6;
+  /* Style pour le conteneur .restaurants__container */
+  /* Style pour le titre .restaurants__title */
+  /* Style pour le conteneur des cartes .restaurants__cards-container */ }
   .restaurants__container {
     display: flex;
     flex-direction: column;
@@ -281,7 +335,10 @@ body {
     display: flex;
     flex-direction: column;
     gap: 1.8rem;
-    width: 100%; }
+    width: 100%;
+    /* Média query pour les écrans de taille supérieure ou égale à 768px */
+    /* Style pour les deux premières liaisons .restaurant__link */
+    /* Style pour la classe .restaurant__link */ }
     @media only screen and (min-width: 768px) {
       .restaurants__cards-container {
         display: grid;
@@ -289,7 +346,8 @@ body {
         row-gap: 5rem;
         column-gap: 10rem; } }
     .restaurants__cards-container a.restaurant__link:nth-child(-n+2) .restaurant-card {
-      position: relative; }
+      position: relative;
+      /* Style pour le texte 'Nouveau' */ }
       .restaurants__cards-container a.restaurant__link:nth-child(-n+2) .restaurant-card::before {
         content: 'Nouveau';
         font-size: 1.4rem;
@@ -308,7 +366,8 @@ body {
       width: 100%;
       max-width: 74rem;
       text-decoration: none;
-      color: black; }
+      color: black;
+      /* Style pour la carte du restaurant .restaurant-card */ }
       .restaurants__cards-container .restaurant__link .restaurant-card {
         display: flex;
         flex-direction: column;
@@ -316,7 +375,9 @@ body {
         border-radius: 1.5rem;
         width: 100%;
         height: 24rem;
-        overflow: hidden; }
+        overflow: hidden;
+        /* Style pour l'image .restaurant-card__image */
+        /* Style pour le contenu .restaurant-card__content */ }
         .restaurants__cards-container .restaurant__link .restaurant-card__image {
           width: 100%;
           height: 70%;
@@ -325,7 +386,9 @@ body {
         .restaurants__cards-container .restaurant__link .restaurant-card__content {
           display: flex;
           justify-content: space-between;
-          padding: 1.5rem 2.5rem 1.5rem 1.3rem; }
+          padding: 1.5rem 2.5rem 1.5rem 1.3rem;
+          /* Style pour le texte .restaurant-card__text */
+          /* Style pour l'icône de notation .restaurant-card__rating */ }
           .restaurants__cards-container .restaurant__link .restaurant-card__content .restaurant-card__text h3 {
             font-size: 1.8rem;
             font-style: normal;
@@ -339,8 +402,10 @@ body {
             height: 2.5rem;
             position: relative; }
 
+/* Styles pour l'en-tête */
 .header {
-  position: relative; }
+  position: relative;
+  /* Styles pour le bouton de retour */ }
   .header__return {
     position: absolute;
     color: black;
@@ -349,21 +414,28 @@ body {
     left: 5%;
     padding: .5rem; }
     .header__return i {
+      /* Taille de police de l'icône */
       font-size: 1.8rem; }
 
+/* Styles pour la section principale du restaurant */
 .restaurant__main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  /* Styles pour l'image du restaurant */
+  /* Styles pour les écrans de grande taille */ }
   .restaurant__main .restaurant__img {
     display: flex;
     justify-content: center;
-    height: 25rem; }
+    height: 25rem;
+    /* Styles pour l'image de restaurant */ }
     .restaurant__main .restaurant__img--photo {
       width: 100%;
       object-fit: cover;
-      object-position: center bottom; }
+      /* Ajustement de l'image pour couvrir la zone */
+      object-position: center bottom;
+      /* Position de l'image dans le conteneur */ }
   @media only screen and (min-width: 768px) {
     .restaurant__main .restaurant__img {
       display: flex;
@@ -374,15 +446,19 @@ body {
         object-fit: cover;
         object-position: center 58%; } }
 
+/* Styles pour la section de restaurant */
 .restaurant {
   width: 100%;
   display: flex;
   flex-direction: column;
   background-color: #F6F6F6;
+  /* Coins arrondis pour le conteneur du restaurant */
   border-top-left-radius: 5rem;
   border-top-right-radius: 5rem;
   max-width: 105rem;
-  margin-top: -5rem; }
+  margin-top: -5rem;
+  /* Styles pour les écrans de grande taille */
+  /* Styles pour le conteneur du menu du restaurant */ }
   @media only screen and (min-width: 768px) {
     .restaurant {
       margin-top: -3rem; } }
@@ -392,12 +468,19 @@ body {
     gap: 4rem;
     margin: 4rem 0;
     align-items: center;
-    justify-content: center; }
+    justify-content: center;
+    /* Styles pour le titre du menu du restaurant */
+    /* Styles pour le conteneur des plats du menu */
+    /* Styles pour le bouton du menu du restaurant */ }
     .restaurant__menu-container .restaurant__menu-title {
       display: flex;
       gap: 1rem;
       align-items: center;
-      padding-right: 3rem; }
+      padding-right: 3rem;
+      /* Styles pour les écrans de petite taille */
+      /* Styles pour les écrans de taille moyenne */
+      /* Styles pour l'icône de cœur */
+      /* Styles pour le titre du restaurant */ }
       @media only screen and (min-width: 375px) {
         .restaurant__menu-container .restaurant__menu-title {
           gap: 4rem;
@@ -417,7 +500,9 @@ body {
       display: flex;
       flex-direction: column;
       gap: 4rem;
-      width: 95%; }
+      width: 95%;
+      /* Styles pour les écrans de grande taille */
+      /* Styles pour les éléments de menu */ }
       @media only screen and (min-width: 768px) {
         .restaurant__menu-container .food__container {
           width: 60%; } }
@@ -425,11 +510,15 @@ body {
         display: flex;
         flex-direction: column;
         gap: 1.2rem;
-        align-items: flex-start; }
+        align-items: flex-start;
+        /* Styles pour les titres de plat */
+        /* Styles pour les options de plat */ }
         .restaurant__menu-container .food__container .food__title {
           animation-name: moveInLeft;
           animation-duration: 1s;
-          animation-timing-function: ease-in; }
+          animation-timing-function: ease-in;
+          /* Styles pour le texte du titre */
+          /* Styles pour la ligne sous le titre */ }
           .restaurant__menu-container .food__container .food__title-text {
             font-size: 1.6rem;
             font-weight: 300;
@@ -446,7 +535,10 @@ body {
           display: flex;
           width: 100%;
           position: relative;
-          overflow: hidden; }
+          overflow: hidden;
+          /* Styles pour la description du plat */
+          /* Styles pour le prix du plat */
+          /* Styles pour l'animation d'agrandissement au survol */ }
           .restaurant__menu-container .food__container .food__option .food__description {
             display: flex;
             flex-direction: column;
@@ -455,21 +547,26 @@ body {
             gap: .5rem;
             text-overflow: ellipsis;
             overflow: hidden;
-            white-space: nowrap; }
+            white-space: nowrap;
+            /* Utilisation du mixin pour la troncature du texte */
+            /* Styles pour le nom du plat */
+            /* Styles pour les ingrédients du plat */ }
             .restaurant__menu-container .food__container .food__option .food__description .food__name {
               width: 100%;
               font-size: 1.8rem;
               font-weight: 500;
               text-overflow: ellipsis;
               overflow: hidden;
-              white-space: nowrap; }
+              white-space: nowrap;
+              /* Utilisation du mixin pour la troncature du texte */ }
             .restaurant__menu-container .food__container .food__option .food__description .food__ingredients {
               width: 100%;
               font-size: 1.5rem;
               font-weight: 300;
               text-overflow: ellipsis;
               overflow: hidden;
-              white-space: nowrap; }
+              white-space: nowrap;
+              /* Utilisation du mixin pour la troncature du texte */ }
           .restaurant__menu-container .food__container .food__option .food__price {
             display: flex;
             margin-left: auto;
@@ -479,7 +576,9 @@ body {
             font-weight: 700;
             position: relative;
             right: 2rem;
-            top: 0; }
+            top: 0;
+            /* Styles pour le texte de prix */
+            /* Styles pour l'icône de choix de plat */ }
             .restaurant__menu-container .food__container .food__option .food__price--text {
               padding: 0 3rem 1.5rem .5rem; }
             .restaurant__menu-container .food__container .food__option .food__price .food__choice {
@@ -491,7 +590,8 @@ body {
               height: 7.2rem;
               padding: 0 1.5rem;
               background-color: #99E2D0;
-              transition: margin-right 0.4s ease-in-out; }
+              transition: margin-right 0.4s ease-in-out;
+              /* Styles pour l'icône de vérification */ }
               .restaurant__menu-container .food__container .food__option .food__price .food__choice::after {
                 content: '\f00c';
                 font-family: 'FontAwesome';
@@ -505,12 +605,15 @@ body {
           .restaurant__menu-container .food__container .food__option:focus .food__choice {
             margin-right: -2rem; }
           .restaurant__menu-container .food__container .food__option:focus {
+            /* Suppression de la bordure de focus */
             outline: none; }
     .restaurant__menu-container .restaurant__menu-button {
       animation: moveInBottom 1s ease-in; }
       .restaurant__menu-container .restaurant__menu-button .btn {
-        width: 18.6rem; }
+        width: 18.6rem;
+        /* Largeur du bouton */ }
 
+/* Style de base pour les boutons */
 .btn {
   background: linear-gradient(to bottom, #FF79DA, #9356DC 120%);
   color: #fff;
@@ -522,29 +625,45 @@ body {
   padding: 1.3rem 1.8rem;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
   cursor: pointer;
-  transition: all .2s ease-in-out; }
+  transition: all .2s ease-in-out;
+  /* Style au survol du bouton */ }
   .btn:hover {
     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.5);
     background: linear-gradient(to bottom, #ff93e1, #a16be0 120%); }
 
+/* Style pour les cartes de petite taille */
 .card-sm {
   display: flex;
   border-radius: 2rem;
   max-width: 70rem;
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15); }
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+  /* Média query pour les écrans de taille supérieure ou égale à 768px */ }
   @media only screen and (min-width: 768px) {
     .card-sm {
       max-width: 32.5rem; } }
 
+/* Style pour les cartes de taille moyenne */
 .card-md {
   border-radius: 1.5rem;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
   background-color: #fff;
   cursor: pointer; }
 
+/* Style pour le bouton de cœur */
 .heart-button {
-  display: inline-block; }
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.8rem;
+  position: relative; }
 
+/* Style pour l'icône de cœur à l'intérieur du bouton de cœur */
+.heart-button .fa-heart {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.3s ease-in-out; }
+
+/* Style pour l'icône de cœur plein (rempli) */
 .fa-heart-solid {
   background: linear-gradient(to bottom, #FF79DA, #9356DC 120%);
   background-clip: text;
@@ -553,35 +672,29 @@ body {
   opacity: 0;
   cursor: pointer; }
 
+/* Lorsque le bouton de cœur est survolé, masquez l'icône de cœur vide et affichez l'icône de cœur plein */
 .heart-button:hover .fa-heart-empty {
-  opacity: 0; }
+  opacity: 0;
+  /* Masquer l'icône de cœur vide */ }
 
 .heart-button:hover .fa-heart-solid {
-  opacity: 1; }
+  opacity: 1;
+  /* Afficher l'icône de cœur plein */ }
 
-/* Hide the checkbox input */
+/* Style pour la case à cocher du cœur (utilisée pour la sélection) */
 .heart-checkbox {
   display: none; }
 
-/* Style the label to look like the heart icon */
-.heart-label {
-  cursor: pointer;
-  font-size: 1.8rem;
-  position: relative; }
-
-.heart-label i {
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: opacity 0.3s ease-in-out; }
-
-/* Change heart appearance when checked (tapped) */
+/* Modifier l'apparence du cœur lorsque la case à cocher est cochée (sélectionnée ou tapée) */
 .heart-checkbox:checked + .heart-label .fa-heart-empty {
-  opacity: 0; }
+  opacity: 0;
+  /* Masquer l'icône de cœur vide lorsque la case à cocher est cochée */ }
 
 .heart-checkbox:checked + .heart-label .fa-heart-solid {
-  opacity: 1; }
+  opacity: 1;
+  /* Afficher l'icône de cœur plein lorsque la case à cocher est cochée */ }
 
+/* Style pour l'élément de chargement (loader) */
 .loader {
   position: fixed;
   padding: 0;
@@ -594,111 +707,136 @@ body {
   z-index: 1000;
   visibility: hidden;
   opacity: 0;
-  animation: showLoader 3s linear; }
+  animation: showLoader 3s linear;
+  /* Conteneur du panneau de chargement */
+  /* Texte de devise ou slogan */ }
   .loader .pan-loader {
     width: 18rem;
     height: 18rem;
     margin: 40vh auto;
-    position: relative; }
-    .loader .pan-loader .steams .steams--1 {
-      position: absolute;
-      width: 5rem;
-      height: 5rem;
-      background-color: #99E2D0;
-      border-radius: 50%;
-      margin-left: 3rem;
-      margin-top: -2.5rem;
-      z-index: 0;
-      opacity: 0; }
-    .loader .pan-loader .steams .steams--2 {
-      position: absolute;
-      width: 5rem;
-      height: 5rem;
-      background-color: #99E2D0;
-      border-radius: 50%;
-      margin-left: 3rem;
-      margin-top: -2.5rem;
-      z-index: 0;
-      opacity: 0; }
-    .loader .pan-loader .steams .steams--3 {
-      position: absolute;
-      width: 5rem;
-      height: 5rem;
-      background-color: #99E2D0;
-      border-radius: 50%;
-      margin-left: 3rem;
-      margin-top: -2.5rem;
-      z-index: 0;
-      opacity: 0; }
-    .loader .pan-loader .steams .steams--4 {
-      position: absolute;
-      width: 5rem;
-      height: 5rem;
-      background-color: #99E2D0;
-      border-radius: 50%;
-      margin-left: 3rem;
-      margin-top: -2.5rem;
-      z-index: 0;
-      opacity: 0; }
-    .loader .pan-loader .steams .steams--5 {
-      position: absolute;
-      width: 5rem;
-      height: 5rem;
-      background-color: #99E2D0;
-      border-radius: 50%;
-      margin-left: 3rem;
-      margin-top: -2.5rem;
-      z-index: 0;
-      opacity: 0; }
-    .loader .pan-loader .steams .steams--6 {
-      position: absolute;
-      width: 5rem;
-      height: 5rem;
-      background-color: #99E2D0;
-      border-radius: 50%;
-      margin-left: 3rem;
-      margin-top: -2.5rem;
-      z-index: 0;
-      opacity: 0; }
-    .loader .pan-loader .steams .steams--7 {
-      position: absolute;
-      width: 5rem;
-      height: 5rem;
-      background-color: #99E2D0;
-      border-radius: 50%;
-      margin-left: 3rem;
-      margin-top: -2.5rem;
-      z-index: 0;
-      opacity: 0; }
-    .loader .pan-loader .steams .steams--8 {
-      position: absolute;
-      width: 5rem;
-      height: 5rem;
-      background-color: #99E2D0;
-      border-radius: 50%;
-      margin-left: 3rem;
-      margin-top: -2.5rem;
-      z-index: 0;
-      opacity: 0; }
-    .loader .pan-loader .steams--1 {
-      animation: steam-one 4s ease-out; }
-    .loader .pan-loader .steams--2 {
-      animation: steam-two 4s ease-out .5s infinite; }
-    .loader .pan-loader .steams--3 {
-      animation: steam-three 4s ease-out .1s infinite; }
-    .loader .pan-loader .steams--4 {
-      animation: steam-four 4s ease-out 1.5s infinite; }
-    .loader .pan-loader .steams--5 {
-      animation: steam-one 4s ease-out 2s infinite; }
-    .loader .pan-loader .steams--6 {
-      animation: steam-two 4s ease-out 2.5s infinite; }
-    .loader .pan-loader .steams--7 {
-      animation: steam-three 4s ease-out 3s infinite; }
-    .loader .pan-loader .steams--8 {
-      animation: steam-four 4s ease-out 3.5s infinite; }
+    position: relative;
+    /* Animation de la vapeur */
+    /* Conteneur style casserole */
+    /* Animation des flammes */ }
+    .loader .pan-loader .steams {
+      /* Différentes animations pour les éléments de vapeur */ }
+      .loader .pan-loader .steams .steams--1 {
+        position: absolute;
+        width: 5rem;
+        height: 5rem;
+        background-color: #99E2D0;
+        border-radius: 50%;
+        margin-left: 3rem;
+        margin-top: -2.5rem;
+        z-index: 0;
+        opacity: 0;
+        animation-timing-function: ease-out;
+        animation-iteration-count: infinite; }
+      .loader .pan-loader .steams .steams--2 {
+        position: absolute;
+        width: 5rem;
+        height: 5rem;
+        background-color: #99E2D0;
+        border-radius: 50%;
+        margin-left: 3rem;
+        margin-top: -2.5rem;
+        z-index: 0;
+        opacity: 0;
+        animation-timing-function: ease-out;
+        animation-iteration-count: infinite; }
+      .loader .pan-loader .steams .steams--3 {
+        position: absolute;
+        width: 5rem;
+        height: 5rem;
+        background-color: #99E2D0;
+        border-radius: 50%;
+        margin-left: 3rem;
+        margin-top: -2.5rem;
+        z-index: 0;
+        opacity: 0;
+        animation-timing-function: ease-out;
+        animation-iteration-count: infinite; }
+      .loader .pan-loader .steams .steams--4 {
+        position: absolute;
+        width: 5rem;
+        height: 5rem;
+        background-color: #99E2D0;
+        border-radius: 50%;
+        margin-left: 3rem;
+        margin-top: -2.5rem;
+        z-index: 0;
+        opacity: 0;
+        animation-timing-function: ease-out;
+        animation-iteration-count: infinite; }
+      .loader .pan-loader .steams .steams--5 {
+        position: absolute;
+        width: 5rem;
+        height: 5rem;
+        background-color: #99E2D0;
+        border-radius: 50%;
+        margin-left: 3rem;
+        margin-top: -2.5rem;
+        z-index: 0;
+        opacity: 0;
+        animation-timing-function: ease-out;
+        animation-iteration-count: infinite; }
+      .loader .pan-loader .steams .steams--6 {
+        position: absolute;
+        width: 5rem;
+        height: 5rem;
+        background-color: #99E2D0;
+        border-radius: 50%;
+        margin-left: 3rem;
+        margin-top: -2.5rem;
+        z-index: 0;
+        opacity: 0;
+        animation-timing-function: ease-out;
+        animation-iteration-count: infinite; }
+      .loader .pan-loader .steams .steams--7 {
+        position: absolute;
+        width: 5rem;
+        height: 5rem;
+        background-color: #99E2D0;
+        border-radius: 50%;
+        margin-left: 3rem;
+        margin-top: -2.5rem;
+        z-index: 0;
+        opacity: 0;
+        animation-timing-function: ease-out;
+        animation-iteration-count: infinite; }
+      .loader .pan-loader .steams .steams--8 {
+        position: absolute;
+        width: 5rem;
+        height: 5rem;
+        background-color: #99E2D0;
+        border-radius: 50%;
+        margin-left: 3rem;
+        margin-top: -2.5rem;
+        z-index: 0;
+        opacity: 0;
+        animation-timing-function: ease-out;
+        animation-iteration-count: infinite; }
+      .loader .pan-loader .steams--1 {
+        animation: steam-one 4s; }
+      .loader .pan-loader .steams--2 {
+        animation: steam-two 4s .5s; }
+      .loader .pan-loader .steams--3 {
+        animation: steam-three 4s .1s; }
+      .loader .pan-loader .steams--4 {
+        animation: steam-four 4s 1.5s; }
+      .loader .pan-loader .steams--5 {
+        animation: steam-one 4s 2s; }
+      .loader .pan-loader .steams--6 {
+        animation: steam-two 4s 2.5s; }
+      .loader .pan-loader .steams--7 {
+        animation: steam-three 4s 3s; }
+      .loader .pan-loader .steams--8 {
+        animation: steam-four 4s 3.5s; }
     .loader .pan-loader .pan-container {
       display: flex;
-      width: 100%; }
+      width: 100%;
+      /* La casserole */
+      /* Poignée de la casserole */ }
       .loader .pan-loader .pan-container .pan {
         width: 60%;
         height: 8rem;
@@ -725,7 +863,8 @@ body {
         border-radius: 0% 50% 70% 50%;
         transform: rotateZ(45deg) scale(1.1);
         filter: drop-shadow(0 0 10px #d43322);
-        animation: shake 1s ease-in-out infinite; }
+        animation: shake 1s ease-in-out infinite;
+        /* Utilisation du mixin fire pour chaque flamme */ }
       .loader .pan-loader .flames .flames--2 {
         height: 20px;
         width: 20px;
@@ -736,7 +875,8 @@ body {
         border-radius: 0% 50% 70% 50%;
         transform: rotateZ(45deg) scale(1.1);
         filter: drop-shadow(0 0 10px #d43322);
-        animation: shake 1s ease-in-out infinite; }
+        animation: shake 1s ease-in-out infinite;
+        /* Utilisation du mixin fire pour chaque flamme */ }
       .loader .pan-loader .flames .flames--3 {
         height: 20px;
         width: 20px;
@@ -747,7 +887,8 @@ body {
         border-radius: 0% 50% 70% 50%;
         transform: rotateZ(45deg) scale(1.1);
         filter: drop-shadow(0 0 10px #d43322);
-        animation: shake 1s ease-in-out infinite; }
+        animation: shake 1s ease-in-out infinite;
+        /* Utilisation du mixin fire pour chaque flamme */ }
   .loader .motto {
     font-family: "Shrikhand", cursive;
     margin-top: 3rem;
@@ -755,6 +896,7 @@ body {
     color: #fff;
     text-align: center;
     letter-spacing: .1rem;
-    font-size: 1.8rem; }
+    font-size: 1.8rem;
+    /* Style pour différents textes de devise */ }
     .loader .motto-text--1 {
       margin-bottom: 2rem; }

@@ -1,62 +1,56 @@
-    .heart-button {
-      // cursor: pointer;
-      display: inline-block;
-      // font-size: 1.8rem;
-      // position: relative;
-
-    }
-
-    .heart-button .fa-heart {
-      // position: absolute;
-      // top: 0;
-      // left: 0;
-      // transition: opacity 0.3s ease-in-out;
-      
-    }
-
-.fa-heart-solid{
-      background: $gradient;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; 
-    opacity: 0;
-    cursor: pointer;
-}
+////////Heart - Accueil + pages restaurants
 
 
-    .heart-button:hover .fa-heart-empty {
-      opacity:0;   
-    }
-
-
-    .heart-button:hover .fa-heart-solid {
-      opacity: 1;
-    }
-
-/* Hide the checkbox input */
-.heart-checkbox {
-  display: none;
-}
-
-/* Style the label to look like the heart icon */
-.heart-label {
+/* Style pour le bouton de cœur */
+.heart-button {
   cursor: pointer;
+  display: inline-block;
   font-size: 1.8rem;
   position: relative;
 }
 
-.heart-label i {
+/* Style pour l'icône de cœur à l'intérieur du bouton de cœur */
+.heart-button .fa-heart {
   position: absolute;
   top: 0;
   left: 0;
   transition: opacity 0.3s ease-in-out;
+
 }
 
-/* Change heart appearance when checked (tapped) */
-.heart-checkbox:checked + .heart-label .fa-heart-empty {
+/* Style pour l'icône de cœur plein (rempli) */
+.fa-heart-solid {
+  background: $gradient;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   opacity: 0;
+  cursor: pointer;
 }
 
-.heart-checkbox:checked + .heart-label .fa-heart-solid {
-  opacity: 1;
+/* Lorsque le bouton de cœur est survolé, masquez l'icône de cœur vide et affichez l'icône de cœur plein */
+.heart-button:hover .fa-heart-empty {
+  opacity: 0; /* Masquer l'icône de cœur vide */
+}
+
+
+.heart-button:hover .fa-heart-solid {
+  opacity: 1; /* Afficher l'icône de cœur plein */
+}
+
+
+////////Heart - pages restaurants//////////
+
+/* Style pour la case à cocher du cœur (utilisée pour la sélection) */
+.heart-checkbox {
+  display: none;
+}
+
+/* Modifier l'apparence du cœur lorsque la case à cocher est cochée (sélectionnée ou tapée) */
+.heart-checkbox:checked+.heart-label .fa-heart-empty {
+  opacity: 0; /* Masquer l'icône de cœur vide lorsque la case à cocher est cochée */
+}
+
+.heart-checkbox:checked+.heart-label .fa-heart-solid {
+  opacity: 1; /* Afficher l'icône de cœur plein lorsque la case à cocher est cochée */
 }

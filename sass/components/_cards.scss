@@ -1,13 +1,17 @@
+/* Style pour les cartes de petite taille */
 .card-sm {
     display: flex;
     border-radius: 2rem;
     max-width: 70rem;
     box-shadow: $shadow;
+
+    /* Média query pour les écrans de taille supérieure ou égale à 768px */
     @media only screen and (min-width: 768px){ max-width:32.5rem;}
         
     
 }
 
+/* Style pour les cartes de taille moyenne */
 .card-md{
     border-radius: 1.5rem;
     box-shadow: $shadow;

@@ -1,4 +1,4 @@
-
+/* Animation pour faire apparaître un élément depuis la gauche */
 @keyframes moveInLeft {
     0% {
         opacity: 0;              
@@ -14,7 +14,7 @@
     }
 }
 
-
+/* Animation pour faire apparaître un élément depuis la droite */
 @keyframes moveInRight {
     0% {
         opacity: 0;                
@@ -31,7 +31,7 @@
     }
 }
 
-
+/* Animation pour faire apparaître un élément depuis le bas */
 @keyframes moveInBottom {
     0% {
         opacity: 0;                
@@ -44,6 +44,7 @@
     }
 }
 
+/* Animation pour faire apparaître un élément en le déplaçant horizontalement depuis la droite */
 @keyframes moveInBtn {
     0%{
         opacity: 0;
@@ -55,7 +56,7 @@
     }
 }
 
-
+/* Animation pour secouer un élément */
 @keyframes shake {
   0%,
   100% {
@@ -67,7 +68,7 @@
   }
 }
 
-
+/* Animation pour la vapeur numéro un */
 @keyframes steam-one{
     0%{
         transform: translateY(0) translateX(0) scale(0.25);
@@ -80,6 +81,7 @@
     }
 }
 
+/* Animation pour la vapeur numéro deux */
 @keyframes steam-two{
     0%{
         transform: translateY(0) translateX(1rem) scale(0.25);
@@ -92,6 +94,7 @@
     }
 }
 
+/* Animation pour la vapeur numéro trois */
 @keyframes steam-three{
     0%{
         transform: translateY(0) translateX(-1rem) scale(0.25);
@@ -103,6 +106,8 @@
         opacity:0;
     }
 }
+
+/* Animation pour la vapeur numéro quatre */
 @keyframes steam-four{
     0%{
         transform: translateY(0) translateX(0) scale(0.25);
@@ -115,7 +120,7 @@
     }
 }
 
-
+/* Animation pour afficher un chargeur */
 @keyframes showLoader {
   0% {
     opacity: 1;
