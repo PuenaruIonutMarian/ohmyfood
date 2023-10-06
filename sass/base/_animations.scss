@@ -1,139 +1,144 @@
 /* Animation pour faire apparaître un élément depuis la gauche */
 @keyframes moveInLeft {
     0% {
-        opacity: 0;              
-        transform: translateX(-10rem);  
+        opacity: 0;
+        transform: translateX(-25rem);
+    }
+
+    40% {
+        opacity: 0;
     }
 
     80% {
-        transform: translateX(1rem);   
+        transform: translateX(1rem);
     }
+
     100% {
-        opacity: 1;           
-        transform: translateX(0);  
+        opacity: 1;
+        transform: translateX(0);
     }
 }
 
 /* Animation pour faire apparaître un élément depuis la droite */
 @keyframes moveInRight {
     0% {
-        opacity: 0;                
-        transform: translateX(10rem);  
+        opacity: 0;
+        transform: translateX(10rem);
     }
 
     80% {
-        transform: translateX(-1rem);  
+        transform: translateX(-1rem);
     }
 
     100% {
-        opacity: 1;                 
-        transform: translateX(0);  
-    }
-}
-
-/* Animation pour faire apparaître un élément depuis le bas */
-@keyframes moveInBottom {
-    0% {
-        opacity: 0;                
-        transform: translateY(3rem);   
-    }
-
-    100% {
-        opacity: 1;                
-        transform: translate(0);   
-    }
-}
-
-/* Animation pour faire apparaître un élément en le déplaçant horizontalement depuis la droite */
-@keyframes moveInBtn {
-    0%{
-        opacity: 0;
-        transform: translateX(7rem);
-    }
-    100%{
-        opacity:1;
+        opacity: 1;
         transform: translateX(0);
     }
 }
 
+
+/* Animation pour faire apparaître un élément depuis la droite */
+@keyframes moveInRight2 {
+    0% {
+        opacity: 0;
+        transform: translateX(40rem);
+    }
+
+    44% {
+        opacity: 0;
+    }
+
+    80% {
+        transform: translateX(-1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
 /* Animation pour secouer un élément */
 @keyframes shake {
-  0%,
-  100% {
-    transform:  rotateZ(30deg) scale(1.1);
 
-  }
-  50% {
-    transform: rotateZ(50deg) scale(0.9);
-  }
+    0%,
+    100% {
+        transform: rotateZ(30deg) scale(1.1);
+
+    }
+
+    50% {
+        transform: rotateZ(50deg) scale(0.9);
+    }
 }
 
 /* Animation pour la vapeur numéro un */
-@keyframes steam-one{
-    0%{
+@keyframes steam-one {
+    0% {
         transform: translateY(0) translateX(0) scale(0.25);
         opacity: 0.35;
     }
 
-    100%{
+    100% {
         transform: translateY(-20rem) translateX(2rem) scale(1);
-        opacity:0;
+        opacity: 0;
     }
 }
 
 /* Animation pour la vapeur numéro deux */
-@keyframes steam-two{
-    0%{
+@keyframes steam-two {
+    0% {
         transform: translateY(0) translateX(1rem) scale(0.25);
         opacity: 0.35;
     }
 
-    100%{
+    100% {
         transform: translateY(-20rem) translateX(-1rem) scale(1);
-        opacity:0;
+        opacity: 0;
     }
 }
 
 /* Animation pour la vapeur numéro trois */
-@keyframes steam-three{
-    0%{
+@keyframes steam-three {
+    0% {
         transform: translateY(0) translateX(-1rem) scale(0.25);
         opacity: 0.35;
     }
 
-    100%{
+    100% {
         transform: translateY(-20rem) translateX(-1rem) scale(1);
-        opacity:0;
+        opacity: 0;
     }
 }
 
 /* Animation pour la vapeur numéro quatre */
-@keyframes steam-four{
-    0%{
+@keyframes steam-four {
+    0% {
         transform: translateY(0) translateX(0) scale(0.25);
         opacity: 0.35;
     }
 
-    100%{
+    100% {
         transform: translateY(-20rem) translateX(-2rem) scale(1);
-        opacity:0;
+        opacity: 0;
     }
 }
 
 /* Animation pour afficher un chargeur */
 @keyframes showLoader {
-  0% {
-    opacity: 1;
-    visibility: visible;
-  }
+    0% {
+        opacity: 1;
+        visibility: visible;
+    }
 
-  85%{
-    opacity: 1;
-    visibility: visible;
-  }
+    85% {
+        opacity: 1;
+        visibility: visible;
+    }
 
-  100% {
-    opacity: 0;
-    visibility: hidden;
-  }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
 }

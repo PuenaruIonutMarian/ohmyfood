@@ -8,7 +8,9 @@
 @keyframes moveInLeft {
   0% {
     opacity: 0;
-    transform: translateX(-10rem); }
+    transform: translateX(-25rem); }
+  40% {
+    opacity: 0; }
   80% {
     transform: translateX(1rem); }
   100% {
@@ -26,20 +28,15 @@
     opacity: 1;
     transform: translateX(0); } }
 
-/* Animation pour faire apparaître un élément depuis le bas */
-@keyframes moveInBottom {
+/* Animation pour faire apparaître un élément depuis la droite */
+@keyframes moveInRight2 {
   0% {
     opacity: 0;
-    transform: translateY(3rem); }
-  100% {
-    opacity: 1;
-    transform: translate(0); } }
-
-/* Animation pour faire apparaître un élément en le déplaçant horizontalement depuis la droite */
-@keyframes moveInBtn {
-  0% {
-    opacity: 0;
-    transform: translateX(7rem); }
+    transform: translateX(40rem); }
+  44% {
+    opacity: 0; }
+  80% {
+    transform: translateX(-1rem); }
   100% {
     opacity: 1;
     transform: translateX(0); } }
@@ -502,10 +499,17 @@ body {
       gap: 4rem;
       width: 95%;
       /* Styles pour les écrans de grande taille */
+      /*  Animation menu */
       /* Styles pour les éléments de menu */ }
       @media only screen and (min-width: 768px) {
         .restaurant__menu-container .food__container {
           width: 60%; } }
+      .restaurant__menu-container .food__container .entrees {
+        animation: moveInRight 1s ease-in; }
+      .restaurant__menu-container .food__container .plats {
+        animation: moveInLeft 2.3s ease-in; }
+      .restaurant__menu-container .food__container .desserts {
+        animation: moveInRight2 3.3s ease-in; }
       .restaurant__menu-container .food__container .food {
         display: flex;
         flex-direction: column;
@@ -514,9 +518,6 @@ body {
         /* Styles pour les titres de plat */
         /* Styles pour les options de plat */ }
         .restaurant__menu-container .food__container .food__title {
-          animation-name: moveInLeft;
-          animation-duration: 1s;
-          animation-timing-function: ease-in;
           /* Styles pour le texte du titre */
           /* Styles pour la ligne sous le titre */ }
           .restaurant__menu-container .food__container .food__title-text {
@@ -531,7 +532,6 @@ body {
             border: solid .16rem;
             width: 4rem; }
         .restaurant__menu-container .food__container .food__option {
-          animation: moveInRight 1s ease-in;
           display: flex;
           width: 100%;
           position: relative;
@@ -607,11 +607,9 @@ body {
           .restaurant__menu-container .food__container .food__option:focus {
             /* Suppression de la bordure de focus */
             outline: none; }
-    .restaurant__menu-container .restaurant__menu-button {
-      animation: moveInBottom 1s ease-in; }
-      .restaurant__menu-container .restaurant__menu-button .btn {
-        width: 18.6rem;
-        /* Largeur du bouton */ }
+    .restaurant__menu-container .restaurant__menu-button .btn {
+      width: 18.6rem;
+      /* Largeur du bouton */ }
 
 /* Style de base pour les boutons */
 .btn {
